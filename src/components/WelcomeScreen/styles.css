@@ -1,0 +1,31 @@
+@keyframes welcomeAnimation {
+   0% {
+      opacity: 0.3;
+      transform: translateY(100%) scale(0.5);
+   }
+   50% {
+      opacity: 1;
+      transform: translateY(-50%) scale(0.5);
+   }
+   100% {
+      transform: translateY(-50%) scale(1.8);
+      opacity: 0;
+   }
+}
+
+.welcomeScreen__container {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.welcomeScreen__title {
+   opacity: 0;
+   font-size: 3rem;
+   font-weight: 400;
+   color: black;
+   transform: scale(0.3);
+   animation: welcomeAnimation 1s ease-out forwards;
+}
