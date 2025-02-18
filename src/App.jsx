@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { WelcomeScreen, UserForm } from './components'
+import { FlowScreen, UserForm } from './components'
 import './App.css'
 
 function App () {
@@ -7,9 +7,9 @@ function App () {
 
   return (
     <div className='App'>
-      {step === 'welcome' && <WelcomeScreen onFinish={() => setStep('userData')} />}
-      {step === 'userData' && <UserForm onComplete={() => setStep('landing')} />}
-
+      {step === 'welcome' && <FlowScreen type='welcome' onFinish={() => setStep('userData')} />}
+      {step === 'userData' && <UserForm onComplete={() => setStep('begin')} />}
+      {step === 'begin' && <FlowScreen type='begin' onFinish={() => setStep('beats')} />}
     </div>
   )
 }

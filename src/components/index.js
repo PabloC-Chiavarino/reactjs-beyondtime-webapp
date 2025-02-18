@@ -1,2 +1,2 @@
 export { default as UserForm } from './UserForm'
-export { default as WelcomeScreen } from './WelcomeScreen'
+export { default as FlowScreen } from './FlowScreen'

@@ -1,4 +1,4 @@
-@keyframes welcomeAnimation {
+@keyframes flowAnimation {
    0% {
       opacity: 0.3;
       transform: translateY(100%) scale(0.5);
@@ -13,7 +13,7 @@
    }
 }
 
-.welcomeScreen__container {
+.flowScreen__container {
    width: 100vw;
    height: 100vh;
    display: flex;
@@ -21,11 +21,11 @@
    align-items: center;
 }
 
-.welcomeScreen__title {
+.flowScreen__title {
    opacity: 0;
    font-size: 3rem;
    font-weight: 400;
-   color: black;
+   color: #202020;
    transform: scale(0.3);
-   animation: welcomeAnimation 1s ease-out forwards;
+   animation: flowAnimation 1s ease-out forwards;
 }
