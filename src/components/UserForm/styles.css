@@ -10,6 +10,21 @@
    }
 }
 
+@keyframes ringRotate {
+   0% {
+      opacity: 0;
+      transform: rotate(0deg);
+   }
+   50% {
+      opacity: 1;
+      transform: rotate(180deg);
+   }
+   100% {
+      opacity: 0;
+      transform: rotate(360deg);
+   }
+}
+
 .userData__container {
    width: 100dvw;
    height: 100dvh;
@@ -17,6 +32,42 @@
    justify-content: center;
    align-items: center;
    background-color: whitesmoke;
+}
+
+.userData__container--ring {
+   width: 500px;
+   height: 500px;
+   border: 10px solid rgba(255, 255, 255, 0.5);
+   border-radius: 50%;
+   position: absolute;
+   bottom: 5.5rem;
+}
+
+.userData__container--secondRing,
+.userData__container--thirdRing {
+   width: 500px;
+   height: 500px;
+   border: 10px solid rgba(255, 255, 255, 0.5);
+   border-radius: 50%;
+   position: absolute;
+   bottom: 5.5rem;
+   opacity: 0;
+   transition: opacity 0.2s;
+   background: conic-gradient(
+      transparent 0deg 225deg,
+      rgba(9, 0, 166, 0.9) 220deg 240deg,
+      transparent 250deg 360deg
+   );
+   mask: radial-gradient(circle, transparent 68%, black 50.5%);
+   z-index: 1;
+}
+
+.ringAnimation {
+   animation: ringRotate 1000ms linear;
+}
+
+.ringAnimation--reverse {
+   animation: ringRotate 1000ms linear reverse;
 }
 
 .userData__title {
@@ -33,6 +84,7 @@
    align-items: center;
    gap: 2rem;
    height: 200px;
+   z-index: 1;
    justify-content: center;
 }
 
@@ -54,12 +106,13 @@
 }
 
 .userData__form button {
-   width: 200px;
-   height: 40px;
+   width: 150px;
+   height: 45px;
    font-size: 1rem;
    padding: 0.5rem 1rem;
+   margin-top: 1rem;
    border: none;
-   border-radius: 0.1rem;
+   border-radius: 4px;
    background-color: #333;
    color: whitesmoke;
    cursor: pointer;
