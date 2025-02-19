@@ -27,5 +27,5 @@
    font-weight: 400;
    color: #202020;
    transform: scale(0.3);
-   animation: flowAnimation 1s ease-out forwards;
+   animation: flowAnimation 800ms ease-out forwards;
 }

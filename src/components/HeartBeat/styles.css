@@ -1,0 +1,136 @@
+@keyframes beatEffect {
+   from {
+      transform: scale(0);
+      opacity: 1;
+   }
+   to {
+      transform: scale(1.4);
+      opacity: 0;
+   }
+}
+
+@keyframes titleAnimation {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-25dvh);
+      opacity: 1;
+   }
+}
+
+@keyframes textAnimationA {
+   from {
+      opacity: 0;
+      transform: translate(-19.5rem, -8.5rem);
+   }
+   to {
+      opacity: 1;
+      transform: translate(-16.5rem, -5.5rem);
+   }
+}
+
+@keyframes textAnimationB {
+   from {
+      opacity: 0;
+      transform: translate(19.5rem, 8.5rem);
+   }
+   to {
+      opacity: 1;
+      transform: translate(16.5rem, 5.5rem);
+   }
+}
+
+@keyframes heartAnimation {
+   0%,
+   100% {
+      transform: scale(1);
+   }
+   10% {
+      transform: scale(1.05);
+   }
+   20% {
+      transform: scale(1);
+   }
+   30% {
+      transform: scale(1.05);
+   }
+   40% {
+      transform: scale(1);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+.beats__container {
+   width: 100dvw;
+   height: 100dvh;
+   background-color: whitesmoke;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.beats__title {
+   position: absolute;
+   font-weight: 400;
+   color: #202020;
+   animation: titleAnimation 1s 0.5s ease-out forwards;
+   opacity: 0;
+}
+
+.beats__textA,
+.beats__textB {
+   font-weight: 400;
+   color: #202020;
+   width: 350px;
+   opacity: 0;
+}
+
+.beats__textA {
+   animation: textAnimationA 1s 2s ease-out forwards;
+}
+
+.beats__textB {
+   animation: textAnimationB 1s 2s ease-out forwards;
+}
+
+.beats__subcontainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 4.5rem;
+}
+
+.beats__heart {
+   position: absolute;
+   width: 5.5rem;
+   height: 5.5rem;
+   background: transparent;
+   z-index: 1;
+   animation: heartAnimation 1.8s 2.5s ease-in-out infinite;
+}
+
+.beat__first,
+.beat__second {
+   position: absolute;
+   opacity: 0;
+   width: 16rem;
+   height: 16rem;
+   background: rgba(255, 0, 0, 0.26);
+   box-shadow: 0 0 15px rgba(255, 0, 0, 0.89);
+   border-radius: 50%;
+}
+
+.beat__first {
+   animation: beatEffect 1.8s 2s ease-in-out infinite;
+}
+
+.beat__second {
+   animation: beatEffect 1.8s 2.4s ease-in-out infinite;
+}
