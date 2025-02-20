@@ -1,15 +1,3 @@
-@keyframes titleAnimation {
-   0% {
-      transform: translateY(0);
-   }
-   50% {
-      transform: translateY(0);
-   }
-   100% {
-      transform: translateY(-25dvh);
-   }
-}
-
 @keyframes ringRotate {
    0% {
       opacity: 0;
@@ -40,7 +28,7 @@
    border: 10px solid rgba(255, 255, 255, 0.5);
    border-radius: 50%;
    position: absolute;
-   bottom: 5.5rem;
+   bottom: 4.5rem;
 }
 
 .userData__container--secondRing,
@@ -50,7 +38,7 @@
    border: 10px solid rgba(255, 255, 255, 0.5);
    border-radius: 50%;
    position: absolute;
-   bottom: 5.5rem;
+   bottom: 4.5rem;
    opacity: 0;
    transition: opacity 0.2s;
    background: conic-gradient(
@@ -71,21 +59,21 @@
 }
 
 .userData__title {
-   position: relative;
+   position: absolute;
    font-weight: 400;
    color: #202020;
    animation: titleAnimation 1.5s ease forwards;
 }
 
 .userData__form {
-   position: absolute;
+   position: relative;
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 2rem;
    height: 200px;
    z-index: 1;
-   justify-content: center;
+   top: 1.5rem;
 }
 
 .userData__form input {

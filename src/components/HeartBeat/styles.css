@@ -9,19 +9,6 @@
    }
 }
 
-@keyframes titleAnimation {
-   0% {
-      transform: translateY(0);
-   }
-   50% {
-      transform: translateY(0);
-   }
-   100% {
-      transform: translateY(-25dvh);
-      opacity: 1;
-   }
-}
-
 @keyframes textAnimationA {
    from {
       opacity: 0;
