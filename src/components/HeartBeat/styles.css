@@ -73,17 +73,22 @@
 .beats__textA,
 .beats__textB {
    font-weight: 450;
-   color: #202020;
+   color: #717171;
    width: 350px;
    opacity: 0;
 }
 
+.beats__text,
+span {
+   color: #e74c3c;
+}
+
 .beats__textA {
-   animation: textAnimationA 1s 2s ease-out forwards;
+   animation: textAnimationA 1s 2.5s ease-out forwards;
 }
 
 .beats__textB {
-   animation: textAnimationB 1s 2s ease-out forwards;
+   animation: textAnimationB 1s 2.5s ease-out forwards;
 }
 
 .beats__subcontainer {
@@ -92,6 +97,8 @@
    align-items: center;
    position: relative;
    top: 4.5rem;
+   animation: fadeIn 1s 2s ease-out forwards;
+   opacity: 0;
 }
 
 .beats__heart {
