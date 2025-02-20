@@ -1,0 +1,19 @@
+.logo__container {
+   position: absolute;
+   width: fit-content;
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   margin: 10px 0 0 20px;
+   z-index: 1;
+}
+
+.logo__container h1 {
+   font-size: 21px;
+   color: #999999;
+}
+
+.logo__container img {
+   width: 31px;
+   opacity: 0.6;
+}
