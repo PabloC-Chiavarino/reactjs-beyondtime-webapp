@@ -33,8 +33,7 @@ const UserForm = ({ onComplete }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     const [name, birthdate] = e.target
-    console.log(name.value, birthdate.value) // debug
-    onComplete()
+    onComplete({ name: name.value, birthdate: birthdate.value })
   }
 
   return (
