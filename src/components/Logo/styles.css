@@ -12,6 +12,12 @@
    font-size: 21px;
    letter-spacing: 0.5px;
    color: #999999;
+   font-weight: 400;
+}
+
+.logo__container span {
+   color: #202020;
+   font-weight: 550;
 }
 
 .logo__container img {
