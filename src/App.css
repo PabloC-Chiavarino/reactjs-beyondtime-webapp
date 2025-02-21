@@ -23,3 +23,8 @@
 .fadeIn {
    animation: fadeIn 1s ease-in-out;
 }
+
+.App {
+   display: flex;
+   overflow: hidden;
+}
