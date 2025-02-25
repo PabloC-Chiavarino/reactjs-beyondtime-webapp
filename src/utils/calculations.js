@@ -33,3 +33,31 @@ export const calculateCarDistance = (totalEnergy) => {
   const energyPerKm = 18 / 100
   return Math.round(totalEnergy / energyPerKm)
 }
+
+export const calculateTotalMinutes = (birthDate) => {
+  const now = new Date()
+  const birth = new Date(birthDate)
+
+  const diffMinutes = Math.floor((now - birth) / (1000 * 60))
+
+  return diffMinutes
+}
+
+export const formatNumber = (num) => {
+  return new Intl.NumberFormat('es', { notation: 'compact', compactDisplay: 'long' }).format(num)
+}
+
+export const calculateUniverseExpansion = (totalMinutes) => {
+  const expansionRate = 4700
+
+  const totalExpansion = totalMinutes * expansionRate
+
+  return totalExpansion
+}
+
+export const calculateCollapsedStars = (totalMinutes) => {
+  const totalSeconds = totalMinutes * 60
+  const collapsedStars = Math.floor(totalSeconds / 30)
+
+  return collapsedStars
+}

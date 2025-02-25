@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { FlowScreen, UserForm, HeartBeat, Logo, ForwardBtn } from './components'
+import { FlowScreen, UserForm, BangMinutes, HeartBeat, Logo, ForwardBtn } from './components'
 import './App.css'
 
 function App () {
@@ -9,7 +9,7 @@ function App () {
 
   const handleStep = (nextStep) => {
     setStep(nextStep)
-    if (nextStep === 'beats') {
+    if (nextStep === 'minutes') {
       userControl.current = true
     }
   }
@@ -24,7 +24,8 @@ function App () {
       <Logo />
       {step === 'welcome' && <FlowScreen type='welcome' onFinish={() => handleStep('userData')} />}
       {step === 'userData' && <UserForm onComplete={(data) => handeUserData(data)} />}
-      {step === 'begin' && <FlowScreen type='begin' onFinish={() => handleStep('beats')} />}
+      {step === 'begin' && <FlowScreen type='begin' onFinish={() => handleStep('minutes')} />}
+      {step === 'minutes' && <BangMinutes userData={userData} />}
       {step === 'beats' && <HeartBeat userData={userData} />}
       {userControl.current === true && <ForwardBtn />}
     </div>
