@@ -37,7 +37,7 @@ function App () {
 
   return (
     <div className='App'>
-      <Logo />
+      <Logo onClick={() => setStep('welcome')} />
       {step === 'welcome' && <FlowScreen type={step} onFinish={() => handleStep()} />}
       {userControl.current === true && <ForwardBtn handleClick={handleStep} />}
 
