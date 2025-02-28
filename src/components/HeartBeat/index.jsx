@@ -1,6 +1,6 @@
-import './styles.css'
-import { calculateHeartBeats, calculateEarthTurns, calculateEnergy, calculateDaysOfPower, calculateCarDistance } from '../../utils/calculations'
+import { formatNumber, calculateHeartBeats, calculateEarthTurns, calculateEnergy, calculateDaysOfPower, calculateCarDistance } from '../../utils/calculations'
 import { heartImg } from '../../assets/img'
+import './styles.css'
 
 const HeartBeat = ({ userData }) => {
   const totalHeartBeats = calculateHeartBeats(userData.birthdate)
@@ -8,10 +8,6 @@ const HeartBeat = ({ userData }) => {
   const totalEnergy = calculateEnergy(totalHeartBeats)
   const totalDaysOfPower = calculateDaysOfPower(totalEnergy)
   const totalCarDistance = calculateCarDistance(totalEnergy)
-
-  const formatNumber = (num) => {
-    return new Intl.NumberFormat('es', { notation: 'compact', compactDisplay: 'long' }).format(num)
-  }
 
   return (
     <div className='beats__container fadeIn'>
