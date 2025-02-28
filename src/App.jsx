@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { FlowScreen, UserForm, BangMinutes, HeartBeat, Logo, ForwardBtn } from './components'
+import { FlowScreen, UserForm, BangMinutes, HeartBeat, JourneyClock, Logo, ForwardBtn } from './components'
 import './App.css'
 
 function App () {
@@ -7,27 +7,44 @@ function App () {
   const [userData, setUserData] = useState(null)
   const userControl = useRef(false)
 
-  const handleStep = (nextStep) => {
-    setStep(nextStep)
-    if (nextStep === 'minutes') {
-      userControl.current = true
+  const handleStep = () => {
+    switch (step) {
+      case 'welcome':
+        setStep('user')
+        break
+      case 'user':
+        setStep('minutes')
+        userControl.current = true
+        break
+      case 'minutes':
+        setStep('beats')
+        break
+      case 'beats':
+        setStep('sunrises')
+        break
+      case 'sunrises':
+        setStep('journey')
+        userControl.current = false
+        break
+      default:
     }
   }
 
   const handeUserData = (data) => {
     setUserData(data)
-    handleStep('begin')
+    handleStep()
   }
 
   return (
     <div className='App'>
       <Logo />
-      {step === 'welcome' && <FlowScreen type='welcome' onFinish={() => handleStep('userData')} />}
-      {step === 'userData' && <UserForm onComplete={(data) => handeUserData(data)} />}
-      {step === 'begin' && <FlowScreen type='begin' onFinish={() => handleStep('minutes')} />}
+      {step === 'welcome' && <FlowScreen type={step} onFinish={() => handleStep()} />}
+      {userControl.current === true && <ForwardBtn handleClick={handleStep} />}
+
+      {step === 'user' && <UserForm onComplete={(data) => handeUserData(data)} />}
       {step === 'minutes' && <BangMinutes userData={userData} />}
       {step === 'beats' && <HeartBeat userData={userData} />}
-      {userControl.current === true && <ForwardBtn />}
+      {step === 'journey' && <JourneyClock />}
     </div>
   )
 }

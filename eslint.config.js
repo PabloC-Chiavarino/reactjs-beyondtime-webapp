@@ -23,6 +23,11 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
+    extends: [
+      'standard',
+      'plugin:react/jsx-runtime',
+      'plugin:react-hooks/recommended'
+    ],
     rules: {
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
