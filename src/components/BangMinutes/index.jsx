@@ -66,10 +66,6 @@ const BangMinutes = ({ userData }) => {
         <div className='bangMinutes__core' />
         <div className='bangMinutes__core--explosion' />
         <canvas ref={particlesRef} width={window.innerWidth / 2} height={window.innerHeight} />
-        {/* <div className='bangMinutes__total'>
-          <h2>{formatNumber(totalMinutes)}</h2>
-          <h3>min</h3>
-        </div> */}
       </div>
       <p className='bangMinutes__textB'>A lo largo tu vida, se han colapsado aproximadamente <span>{formatNumber(totalStars)}</span> estrellas en el universo, dispersando energía y materia en todas direcciones. Así como las estrellas, cada minuto es una oportunidad para colapsar tus dudas, expandir conocimientos y generar nuevas posibilidades. </p>
     </div>
