@@ -32,8 +32,8 @@
    align-items: center;
    position: relative;
    top: 4.5rem;
-   animation: inEffect 0.8s 2s ease-out forwards;
    opacity: 0;
+   animation: inEffect 0.8s 2s ease-out forwards;
 }
 
 .journeyClock__clock {

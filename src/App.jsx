@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { FlowScreen, UserForm, BangMinutes, HeartBeat, JourneyClock, Logo, ForwardBtn } from './components'
+import { FlowScreen, UserForm, BangMinutes, HeartBeat, Sunrises, JourneyClock, Logo, ForwardBtn } from './components'
 import './App.css'
 
 function App () {
@@ -44,6 +44,7 @@ function App () {
       {step === 'user' && <UserForm onComplete={(data) => handeUserData(data)} />}
       {step === 'minutes' && <BangMinutes userData={userData} />}
       {step === 'beats' && <HeartBeat userData={userData} />}
+      {step === 'sunrises' && <Sunrises />}
       {step === 'journey' && <JourneyClock />}
     </div>
   )

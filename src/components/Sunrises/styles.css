@@ -1,0 +1,55 @@
+.sunrises__container {
+   width: 100dvw;
+   height: 100dvh;
+   background-color: whitesmoke;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.sunrises__title {
+   position: absolute;
+   font-weight: 400;
+   color: #202020;
+   animation: titleAnimation 1s 0.5s ease-out forwards;
+   opacity: 0;
+}
+
+.sunrises__subcontainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 4.5rem;
+   animation: inEffect 0.8s 2s ease-out forwards;
+   opacity: 1;
+}
+
+.sunrises__sun {
+   position: absolute;
+   width: 1rem;
+   height: 1rem;
+   border-radius: 50%;
+   border: 4px solid #ff822f;
+}
+
+.sunrises__textA,
+.sunrises__textB {
+   font-weight: 450;
+   color: #717171;
+   width: 350px;
+   opacity: 0;
+}
+
+.sunrises__text,
+span {
+   color: #e74c3c;
+}
+
+.sunrises__textA {
+   animation: textAnimationA 1s 2.5s ease-out forwards;
+}
+
+.sunrises__textB {
+   animation: textAnimationB 1s 2.5s ease-out forwards;
+}
