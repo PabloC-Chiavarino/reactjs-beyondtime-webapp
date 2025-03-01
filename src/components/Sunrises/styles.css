@@ -18,6 +18,16 @@
    }
 }
 
+@keyframes heatDistortionEffect {
+   0% {
+      filter: url(#heatDistortion);
+   }
+
+   100% {
+      filter: url(#heatDistortion);
+   }
+}
+
 .sunrises__container {
    width: 100dvw;
    height: 100dvh;
@@ -85,7 +95,8 @@
    transform: translateY(175%);
    mix-blend-mode: screen;
    opacity: 0;
-   animation: sunriseEffect 1.8s 3s ease-out forwards;
+   animation: sunriseEffect 1.8s 3s ease-out forwards,
+      heatDistortionEffect 1.8s 3.5s ease-out forwards;
 }
 
 .sunrises__textA,
