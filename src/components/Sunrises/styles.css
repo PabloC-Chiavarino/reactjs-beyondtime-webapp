@@ -1,7 +1,27 @@
+@keyframes sunriseEffect {
+   0% {
+      opacity: 0;
+      transform: translateY(175%);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(-75%);
+   }
+}
+
+@keyframes skyEffect {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
 .sunrises__container {
    width: 100dvw;
    height: 100dvh;
-   background-color: whitesmoke;
+   background-color: #e6e6e6;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -16,21 +36,56 @@
 }
 
 .sunrises__subcontainer {
+   width: 30rem;
+   height: 70dvh;
    display: flex;
    justify-content: center;
    align-items: center;
-   position: relative;
-   top: 4.5rem;
-   animation: inEffect 0.8s 2s ease-out forwards;
-   opacity: 1;
+   position: absolute;
+   top: 30dvh;
+   animation: fadeIn 1s 2s ease-out forwards;
+   opacity: 0;
+}
+
+.sunrises__sky {
+   position: absolute;
+   top: 6rem;
+   border-radius: 50%;
+   background: linear-gradient(
+      to bottom,
+      rgba(0, 31, 77, 0.64) 10%,
+      rgba(0, 0, 0, 0) 100%
+   );
+   filter: blur(30px);
+   width: 22rem;
+   height: 50dvh;
+   &::after {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      background: linear-gradient(
+         to bottom,
+         rgba(135, 206, 250, 0.9) 20%,
+         rgba(255, 223, 186, 0.8) 60%,
+         rgb(255, 255, 255) 100%
+      );
+      opacity: 0;
+      border-radius: 50%;
+      animation: skyEffect 1.5s 3s ease-in-out forwards;
+   }
 }
 
 .sunrises__sun {
    position: absolute;
-   width: 1rem;
-   height: 1rem;
+   width: 7.5rem;
+   height: 7.5rem;
    border-radius: 50%;
-   border: 4px solid #ff822f;
+   background: radial-gradient(circle, #ffcc33, #ff4500 70%);
+   transform: translateY(175%);
+   mix-blend-mode: screen;
+   opacity: 0;
+   animation: sunriseEffect 1.8s 3s ease-out forwards;
 }
 
 .sunrises__textA,
