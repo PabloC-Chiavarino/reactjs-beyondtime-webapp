@@ -12,7 +12,7 @@
 .journeyClock__container {
    width: 100dvw;
    height: 100dvh;
-   background-color: whitesmoke;
+   background-color: #e6e6e6;
    display: flex;
    justify-content: center;
    align-items: center;

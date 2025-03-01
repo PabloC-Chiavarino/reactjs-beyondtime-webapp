@@ -6,7 +6,7 @@
 
 body {
    font-family: "Segoe UI", sans-serif;
-   background-color: #d1d1d1;
+   background-color: rgb(187, 187, 187);
    overflow: hidden;
    user-select: none;
 }

@@ -19,7 +19,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: whitesmoke;
+   background-color: #e6e6e6;
 }
 
 .userData__container--ring {
