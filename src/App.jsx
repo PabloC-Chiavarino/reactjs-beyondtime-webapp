@@ -44,8 +44,8 @@ function App () {
       {step === 'user' && <UserForm onComplete={(data) => handeUserData(data)} />}
       {step === 'minutes' && <BangMinutes userData={userData} />}
       {step === 'beats' && <HeartBeat userData={userData} />}
-      {step === 'sunrises' && <Sunrises />}
-      {step === 'journey' && <JourneyClock />}
+      {step === 'sunrises' && <Sunrises userData={userData} />}
+      {step === 'journey' && <JourneyClock userData={userData} />}
     </div>
   )
 }
