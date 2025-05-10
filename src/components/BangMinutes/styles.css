@@ -2,6 +2,7 @@
    from {
       transform: scale(1);
    }
+
    to {
       transform: scale(0.05);
       box-shadow: 0 0 100px 250px #ffffff;
@@ -12,6 +13,7 @@
    from {
       background: #202020;
    }
+
    to {
       background: #ad291a;
    }
@@ -23,10 +25,26 @@
       opacity: 1;
       box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
    }
+
    100% {
       transform: scale(1.5);
       opacity: 0;
       box-shadow: 0 0 80px 40px rgba(231, 76, 60, 0);
+   }
+}
+
+@keyframes bangTitle {
+   0% {
+      transform: translateY(0);
+   }
+
+   50% {
+      transform: translateY(0);
+   }
+
+   100% {
+      transform: translateY(-25dvh);
+      opacity: 1;
    }
 }
 
@@ -43,7 +61,7 @@
    position: absolute;
    font-weight: 400;
    color: #202020;
-   animation: titleAnimation 1s 0.5s ease-out forwards;
+   animation: bangTitle 1s 0.5s ease-out forwards;
    opacity: 0;
    font-size: 21px;
    bottom: 13rem;
@@ -74,11 +92,9 @@
    width: 10rem;
    height: 10rem;
    border-radius: 50%;
-   background: radial-gradient(
-      circle,
-      rgba(140, 20, 15, 0.6) 10%,
-      rgba(231, 76, 60, 0.8) 40%
-   );
+   background: radial-gradient(circle,
+         rgba(140, 20, 15, 0.6) 10%,
+         rgba(231, 76, 60, 0.8) 40%);
    z-index: 0;
    opacity: 0;
    animation: explosionEffect 1s 3.8s cubic-bezier(0, 0, 0, 1) forwards;
@@ -130,16 +146,16 @@ span {
    .bangMinutes__subcontainer {
       top: 2.8rem;
    }
-   
+
    .bangMinutes__core {
-   width: 6.25rem;
-   height: 6.25rem;
+      width: 6.25rem;
+      height: 6.25rem;
    }
 
    .bangMinutes__core--explosion {
       width: 12rem;
       height: 12rem;
-      }
+   }
 
    canvas {
       scale: .85;
@@ -157,13 +173,119 @@ span {
       top: 275px;
       width: 80%;
    }
-   
+
    .bangMinutes__textB {
       animation: textAnimationB 1s 2.5s ease-out forwards;
       right: 82%;
       top: 305px;
       width: 80%;
       height: 80px;
+   }
+}
+
+@media (min-width: 400px) {
+   .bangMinutes__title {
+      font-size: 26px;
+      bottom: 21rem;
+   }
+
+   .bangMinutes__subcontainer {
+      top: 2.8rem;
+   }
+
+   .bangMinutes__core {
+      width: 6.5rem;
+      height: 6.5rem;
+   }
+
+   .bangMinutes__core--explosion {
+      width: 13rem;
+      height: 13rem;
+   }
+
+   canvas {
+      scale: 1.1;
+   }
+
+   .bangMinutes__textA,
+   .bangMinutes__textB {
+      font-size: 1rem;
+   }
+
+   .bangMinutes__textA {
+      left: 74%;
+      top: 304px;
+   }
+
+   .bangMinutes__textB {
+      right: 73%;
+      top: 365px;
+   }
+}
+
+@media (min-width: 400px) and (min-height: 700px) {
+   .bangMinutes__title {
+      bottom: 55%;
+      font-size: 27px;
+   }
+
+   .bangMinutes__textA {
+      left: 74%;
+      top: 304px;
+      height: 105px;
+   }
+
+   .bangMinutes__textB {
+      right: 73%;
+      top: 450px;
+      height: 105px;
+   }
+}
+
+@media (min-width: 480px) {
+   .bangMinutes__textA {
+      left: 65%;
+   }
+
+   .bangMinutes__textB {
+      right: 65%;
+   }
+}
+
+@media (min-width: 768px) {
+
+   .bangMinutes__title {
+      font-size: 30px;
+      bottom: 55%;
+   }
+
+   .bangMinutes__textA {
+      left: 45%;
+      top: 365px;
+   }
+
+   .bangMinutes__textB {
+      right: 44%;
+      top: 655px;
+   }
+
+   .bangMinutes__core--explosion {
+      width: 18rem;
+      height: 18rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   .bangMinutes__textA {
+      width: 350px;
+      left: 28%;
+      top: 315px;
+   }
+
+   .bangMinutes__textB {
+      width: 350px;
+      right: 28%;
+      top: 350px;
    }
 }
 
@@ -176,15 +298,15 @@ span {
       justify-content: center;
       align-items: center;
    }
-   
+
    .bangMinutes__title {
       position: absolute;
       font-weight: 400;
       color: #202020;
-      animation: titleAnimation 1s 0.5s ease-out forwards;
+      animation: bangTitle 1s 0.5s ease-out forwards;
       opacity: 0;
    }
-   
+
    .bangMinutes__subcontainer {
       display: flex;
       justify-content: center;
@@ -194,7 +316,7 @@ span {
       animation: fadeIn 1s 2s ease-out forwards;
       opacity: 0;
    }
-   
+
    .bangMinutes__core {
       position: absolute;
       width: 8rem;
@@ -204,27 +326,25 @@ span {
       z-index: 1;
       animation: coreEffectA 1.8s 2s linear forwards, coreEffectB 1s 2.8s linear;
    }
-   
+
    .bangMinutes__core--explosion {
       position: absolute;
       width: 25rem;
       height: 25rem;
       border-radius: 50%;
-      background: radial-gradient(
-         circle,
-         rgba(140, 20, 15, 0.6) 10%,
-         rgba(231, 76, 60, 0.8) 40%
-      );
+      background: radial-gradient(circle,
+            rgba(140, 20, 15, 0.6) 10%,
+            rgba(231, 76, 60, 0.8) 40%);
       z-index: 0;
       opacity: 0;
       animation: explosionEffect 1s 3.8s cubic-bezier(0, 0, 0, 1) forwards;
    }
-   
+
    canvas {
       position: absolute;
       z-index: 0;
    }
-   
+
    .bangMinutes__textA,
    .bangMinutes__textB {
       font-weight: 450;
@@ -232,16 +352,16 @@ span {
       width: 350px;
       opacity: 0;
    }
-   
+
    .bangMinutes__text,
    span {
       color: #e74c3c;
    }
-   
+
    .bangMinutes__textA {
       animation: textAnimationA 1s 2.5s ease-out forwards;
    }
-   
+
    .bangMinutes__textB {
       animation: textAnimationB 1s 2.5s ease-out forwards;
    }

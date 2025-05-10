@@ -36,6 +36,46 @@
    }
 }
 
+@media (min-width: 400px) {
+   .logo__container h1 {
+      font-size: 21px;
+   }
+   
+   .logo__container img {
+      width: 30px;
+   }
+}
+
+@media (min-width: 480px) {
+   .logo__container h1 {
+      font-size: 22px;
+   }
+   
+   .logo__container img {
+      width: 31px;
+   }
+}
+
+@media (min-width: 768px) {
+   .logo__container h1 {
+      font-size: 26px;
+   }
+   
+   .logo__container img {
+      width: 37px;
+   }
+}
+
+@media (min-width: 1024px) {
+   .logo__container h1 {
+      font-size: 24px;
+   }
+   
+   .logo__container img {
+      width: 30px;
+   }
+}
+
 @media (min-width: 1366px) {
    .logo__container {
       position: absolute;

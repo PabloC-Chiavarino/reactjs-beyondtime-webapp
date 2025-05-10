@@ -30,6 +30,19 @@
    }
 }
 
+@keyframes sunrisesTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-25dvh);
+      opacity: 1;
+   }
+}
+
 .sunrises__container {
    width: 100dvw;
    height: 100dvh;
@@ -43,7 +56,7 @@
    position: absolute;
    font-weight: 400;
    color: #202020;
-   animation: titleAnimation 1s 0.5s ease-out forwards;
+   animation: sunrisesTitle 1s 0.5s ease-out forwards;
    opacity: 0;
    font-size: 21px;
    bottom: 13rem;
@@ -131,6 +144,7 @@ span {
 }
 
 @media (min-width: 360px) {
+
    .sunrises__title {
       font-size: 25px;
       bottom: 18rem;
@@ -172,6 +186,181 @@ span {
    }
 }
 
+@media (min-width: 400px) {
+
+   @keyframes sunriseEffect {
+      0% {
+         opacity: 0;
+         transform: translateY(175%);
+      }
+
+      100% {
+         opacity: 1;
+         transform: translateY(-90%);
+      }
+   }
+
+   .sunrises__title {
+      font-size: 26px;
+      bottom: 21rem;
+   }
+
+   .sunrises__subcontainer {
+      height: 70dvh;
+      top: 30dvh;
+   }
+
+   .sunrises__sky {
+      top: 12rem;
+   }
+
+   .sunrises__sun {
+      width: 5rem;
+      height: 5rem;
+   }
+
+   .sunrises__textA,
+   .sunrises__textB {
+      font-size: 1rem;
+   }
+
+   .sunrises__textA {
+      left: 74%;
+      top: 304px;
+   }
+
+   .sunrises__textB {
+      right: 73%;
+      top: 365px;
+   }
+}
+
+@media (min-width: 400px) and (min-height: 700px) {
+
+   @keyframes sunriseEffect {
+      0% {
+         opacity: 0;
+         transform: translateY(175%);
+      }
+
+      100% {
+         opacity: 1;
+         transform: translateY(-120%);
+      }
+   }
+
+   .sunrises__title {
+      bottom: 55%;
+      font-size: 27px;
+   }
+
+   .sunrises__textA {
+      left: 74%;
+      top: 304px;
+      height: 105px;
+   }
+
+   .sunrises__textB {
+      right: 73%;
+      top: 450px;
+      height: 105px;
+   }
+
+   .sunrises__sun {
+      width: 5.5rem;
+      height: 5.5rem;
+   }
+
+   .sunrises__sky {
+      width: 25rem;
+      height: 28dvh;
+   }
+}
+
+@media (min-width: 480px) {
+   .sunrises__textA {
+      left: 65%;
+   }
+   
+   .sunrises__textB {
+      right: 65%;
+   }
+}
+
+@media (min-width: 768px) {
+
+      @keyframes sunriseEffect {
+      0% {
+         opacity: 0;
+         transform: translateY(175%);
+      }
+
+      100% {
+         opacity: 1;
+         transform: translateY(-165%);
+      }
+   }
+   
+   .sunrises__title {
+      bottom: 55%;
+      font-size: 30px;
+   }
+
+   .sunrises__textA {
+      left: 45%;
+      top: 365px;
+   }
+   
+   .sunrises__textB {
+      right: 44%;
+      top: 665px;
+   }
+
+   .sunrises__sun {
+      width: 6.5rem;
+      height: 6.5rem;
+   }
+
+   .sunrises__sky {
+      width: 27rem;
+      height: 25dvh;
+   }
+}
+
+@media (min-width: 1024px) {
+   .sunrises__title {
+      bottom: 55%;
+      font-size: 30px;
+   }
+
+   .sunrises__textA {
+      left: 28%;
+      top: 315px;
+      width: 350px;
+   }
+
+   .sunrises__textB {
+      right: 28%;
+      top: 350px;
+      width: 350px;
+   }
+
+   .sunrises__subcontainer {
+      top: 20rem;
+   }
+
+   .sunrises__sun {
+      width: 6.5rem;
+      height: 6.5rem;
+   }
+
+   .sunrises__sky {
+      width: 30rem;
+      height: 15dvh;
+      top: 3rem;
+   }
+}
+
 @media (min-width: 1366px) {
    .sunrises__container {
       width: 100dvw;
@@ -186,7 +375,7 @@ span {
       position: absolute;
       font-weight: 400;
       color: #202020;
-      animation: titleAnimation 1s 0.5s ease-out forwards;
+      animation: sunrisesTitle 1s 0.5s ease-out forwards;
       opacity: 0;
    }
 

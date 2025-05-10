@@ -62,6 +62,19 @@
    }
 }
 
+@keyframes heartTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-25dvh);
+      opacity: 1;
+   }
+}
+
 .beats__container {
    width: 100dvw;
    height: 100dvh;
@@ -75,7 +88,7 @@
    position: absolute;
    font-weight: 400;
    color: #202020;
-   animation: titleAnimation 1s 0.5s ease-out forwards;
+   animation: heartTitle 1s 0.5s ease-out forwards;
    opacity: 0;
    font-size: 21px;
    bottom: 13rem;
@@ -151,6 +164,7 @@ span {
 }
 
 @media (min-width: 360px) {
+
    .beats__title {
       font-size: 25px;
       bottom: 18rem;
@@ -159,11 +173,6 @@ span {
    .beats__textA,
    .beats__textB {
       font-size: 15px;
-   }
-
-   .beats__text,
-   span {
-      color: #e74c3c;
    }
 
    .beats__textA {
@@ -181,12 +190,12 @@ span {
    }
 
    .beats__subcontainer {
-      top: 3rem;
+      top: 2.75rem;
    }
 
    .beats__heart {
-      width: 4rem;
-      height: 4rem;
+      width: 4.25rem;
+      height: 4.25rem;
    }
 
    .beat__first,
@@ -194,13 +203,148 @@ span {
       width: 9.5rem;
       height: 9.5rem;
    }
+}
 
-   .beat__first {
-      animation: beatEffect 1.8s 2s ease-in-out infinite;
+@media (min-width: 400px) {
+   .beats__title {
+      font-size: 26px;
+      bottom: 21rem;
    }
 
+   .beats__textA,
+   .beats__textB {
+      font-size: 1rem;
+   }
+
+   .beats__textA {
+      left: 74%;
+      top: 304px;
+   }
+
+   .beats__textB {
+      right: 73%;
+      top: 365px;
+   }
+
+   .beats__subcontainer {
+      top: 2.5rem;
+   }
+
+   .beats__heart {
+      width: 4.5rem;
+      height: 4.5rem;
+   }
+
+   .beat__first,
    .beat__second {
-      animation: beatEffect 1.8s 2.4s ease-in-out infinite;
+      width: 11.5rem;
+      height: 11.5rem;
+   }
+}
+
+@media (min-width: 400px) and (min-height: 700px) {
+   .beats__title {
+      bottom: 55%;
+      font-size: 27px;
+   }
+
+   .beats__textA {
+      left: 74%;
+      top: 304px;
+      height: 105px;
+   }
+   
+   .beats__textB {
+      right: 73%;
+      top: 450px;
+      height: 105px;
+   }
+
+   .beats__subcontainer {
+      top: 2rem;
+   }
+
+      .beats__heart {
+      width: 5.5rem;
+      height: 5.5rem;
+   }
+
+      .beat__first,
+   .beat__second {
+      width: 13.5rem;
+      height: 13.5rem;
+   }
+}
+
+@media (min-width: 480px) {
+   .beats__textA {
+      left: 65%;
+   }
+   
+   .beats__textB {
+      right: 65%;
+   }
+}
+
+@media (min-width: 768px) {
+   .beats__title {
+      bottom: 55%;
+      font-size: 30px;
+   }
+
+   .beats__textA {
+      left: 45%;
+      top: 365px;
+   }
+   
+   .beats__textB {
+      right: 44%;
+      top: 665px;
+   }
+
+   .beats__heart {
+      width: 6.5rem;
+      height: 6.5rem;
+   }
+
+   .beat__first,
+   .beat__second {
+      width: 16rem;
+      height: 16rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   .beats__title {
+      bottom: 55%;
+      font-size: 30px;
+   }
+
+   .beats__textA {
+      left: 28%;
+      top: 315px;
+      width: 350px;
+   }
+
+   .beats__textB {
+      right: 28%;
+      top: 350px;
+      width: 350px;
+   }
+
+   .beats__subcontainer {
+      top: 2.5rem;
+   }
+
+   .beats__heart {
+      width: 6rem;
+      height: 6rem;
+   }
+
+   .beat__first,
+   .beat__second {
+      width: 19rem;
+      height: 19rem;
    }
 }
 
@@ -218,7 +362,7 @@ span {
       position: absolute;
       font-weight: 400;
       color: #202020;
-      animation: titleAnimation 1s 0.5s ease-out forwards;
+      animation: heartTitle 1s 0.5s ease-out forwards;
       opacity: 0;
       font-size: 21px;
       bottom: 13rem;

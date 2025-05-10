@@ -45,22 +45,4 @@
          opacity: 0;
       }
    }
-   
-   .flowScreen__container {
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-   
-   .flowScreen__title {
-      opacity: 0;
-      font-size: 2rem;
-      font-weight: 400;
-      color: #202020;
-      transform: scale(0.3);
-      animation: flowAnimation 800ms ease-out forwards;
-   }
-   
 }

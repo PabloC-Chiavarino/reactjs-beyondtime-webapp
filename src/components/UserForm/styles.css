@@ -13,6 +13,19 @@
    }
 }
 
+@keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-10dvh);
+      opacity: 1;
+   }
+}
+
 .userData__container {
    width: 100dvw;
    height: 100dvh;
@@ -22,13 +35,21 @@
    background-color: #e6e6e6;
 }
 
+.userData__subcontainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   width: 100%;
+}
+
 .userData__container--ring {
    width: 300px;
    height: 300px;
    border: 5px solid rgba(255, 255, 255, 0.5);
    border-radius: 50%;
    position: absolute;
-   bottom: 2.5rem;
 }
 
 .userData__container--secondRing,
@@ -38,7 +59,6 @@
    border: 5px solid rgba(255, 255, 255, 0.5);
    border-radius: 50%;
    position: absolute;
-   bottom: 2.5rem;
    opacity: 0;
    transition: opacity 0.2s;
    background: conic-gradient(
@@ -58,13 +78,14 @@
    animation: ringRotate 1000ms linear reverse;
 }
 
+
 .userData__title {
    position: absolute;
+   width: fit-content;
    font-weight: 400;
    color: #202020;
-   animation: titleAnimation 1.5s ease forwards;
+   animation: dataTitle 1.5s ease forwards;
    font-size: 21px;
-   margin-top: 4rem;
 }
 
 .userData__form {
@@ -73,9 +94,8 @@
    flex-direction: column;
    align-items: center;
    gap: 1rem;
-   height: 175px;
    z-index: 1;
-   top: 3.5rem;
+   top: 2rem;
 }
 
 .userData__form input {
@@ -116,13 +136,26 @@
 }
 
 @media (min-width: 360px) {
+
+   @keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-18dvh);
+      opacity: 1;
+   }
+}
+
    .userData__container--ring {
       width: 330px;
       height: 330px;
       border: 5px solid rgba(255, 255, 255, 0.5);
       border-radius: 50%;
       position: absolute;
-      bottom: 8rem;
    }
    
    .userData__container--secondRing,
@@ -132,7 +165,6 @@
       border: 5px solid rgba(255, 255, 255, 0.5);
       border-radius: 50%;
       position: absolute;
-      bottom: 8rem;
       opacity: 0;
       transition: opacity 0.2s;
       background: conic-gradient(
@@ -144,21 +176,11 @@
       z-index: 1;
    }
    
-   .ringAnimation {
-      animation: ringRotate 1000ms linear;
-   }
-   
-   .ringAnimation--reverse {
-      animation: ringRotate 1000ms linear reverse;
-   }
-   
    .userData__title {
-      position: absolute;
       font-weight: 400;
       color: #202020;
-      animation: titleAnimation 1.5s ease forwards;
+      animation: dataTitle 1.5s ease forwards;
       font-size: 23px;
-      margin-top: 4rem;
    }
    
    .userData__form {
@@ -167,9 +189,8 @@
       flex-direction: column;
       align-items: center;
       gap: 1rem;
-      height: 175px;
       z-index: 1;
-      top: 2rem;
+      top: 1rem;
    }
    
    .userData__form input {
@@ -182,19 +203,176 @@
       animation-fill-mode: forwards;
    }
    
-   .userData__form input:nth-child(1) {
-      animation-delay: 0.25s;
-   }
-   
-   .userData__form input:nth-child(2) {
-      animation-delay: 0.5s;
-   }
-   
    .userData__form button {
       width: 102px;
       height: 37px;
       font-size: 14px;
    }
+}
+
+@media (min-width: 400px) {
+
+      @keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-23dvh);
+      opacity: 1;
+   }
+}
+
+   .userData__container--ring {
+      width: 375px;
+      height: 375px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+   
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 375px;
+      height: 375px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+   
+   .userData__title {
+      font-size: 25px;
+      margin-top: 25%;
+   }
+   
+   .userData__form {
+      height: 150px;
+      top: 1rem;
+   }
+   
+   .userData__form input {
+      width: 155px;
+      height: 35px;
+   }
+   
+   .userData__form button {
+      width: 105px;
+      height: 40px;
+      font-size: 14px;
+   }
+}
+
+@media (min-width: 400px) and (min-height: 720px) {
+
+   @keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-25dvh);
+      opacity: 1;
+   }
+}
+
+   .userData__container--ring {
+      width: 375px;
+      height: 375px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+   
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 375px;
+      height: 375px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+
+   .userData__title {
+      font-size: 25px;
+      margin-top: 32%;
+   }
+
+   .userData__form {
+      height: 170px;
+      top: 1rem;
+   }
+   
+   .userData__form input {
+      width: 165px;
+      height: 40px;
+   }
+   
+   .userData__form button {
+      width: 105px;
+      height: 42px;
+      font-size: 15px;
+   }
+}
+
+@media (min-width: 768px) {
+   .userData__container--ring {
+      width: 450px;
+      height: 450px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+   
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 450px;
+      height: 450px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+
+   .userData__title {
+      font-size: 27px;
+   }
+}
+
+@media (min-width: 1024px) {
+
+      @keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-40dvh);
+      opacity: 1;
+   }
+}
+
+   .userData__container--ring {
+      width: 500px;
+      height: 500px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+   
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 500px;
+      height: 500px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+
+   .userData__form {
+      height: 180px;
+      top: 1rem;
+   }
+   
+   .userData__form input {
+      width: 175px;
+      height: 40px;
+   }
+   
+   .userData__form button {
+      width: 105px;
+      height: 42px;
+      font-size: 15px;
+   }
+   
 }
 
 @media (min-width: 1366px) {
@@ -244,10 +422,7 @@
    }
    
    .userData__title {
-      position: absolute;
-      font-weight: 400;
-      color: #202020;
-      animation: titleAnimation 1.5s ease forwards;
+      font-size: 2rem;
    }
    
    .userData__form {

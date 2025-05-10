@@ -38,29 +38,31 @@ const UserForm = ({ onComplete }) => {
 
   return (
     <div className='userData__container fadeIn'>
-      <div className='fadeIn userData__container--ring' />
-      <div className={`userData__container--secondRing ${ringAnimation ? 'ringAnimation' : ''}`} />
-      <div className={`userData__container--thirdRing ${ringAnimation ? 'ringAnimation--reverse' : ''}`} />
-      <h1 className='userData__title'>Ingresa tus datos</h1>
-      {showForm && (
-        <form className='userData__form' onSubmit={handleSubmit}>
-          <input
-            className='fadeIn'
-            type='text'
-            placeholder='Nombre'
-            required
-          />
-          <input
-            className='fadeIn'
-            type='date'
-            min='1900-01-01'
-            max={new Date().toISOString().split('T')[0]}
-            placeholder='Fecha de nacimiento'
-            required
-          />
-          <button className='fadeIn'>Enviar</button>
-        </form>
-      )}
+      <div className="userData__subcontainer">
+        <div className='fadeIn userData__container--ring' />
+        <div className={`userData__container--secondRing ${ringAnimation ? 'ringAnimation' : ''}`} />
+        <div className={`userData__container--thirdRing ${ringAnimation ? 'ringAnimation--reverse' : ''}`} />
+          <h1 className='userData__title'>Ingresa tus datos</h1>
+          {showForm && (
+            <form className='userData__form' onSubmit={handleSubmit}>
+              <input
+                className='fadeIn'
+                type='text'
+                placeholder='Nombre'
+                required
+              />
+              <input
+                className='fadeIn'
+                type='date'
+                min='1900-01-01'
+                max={new Date().toISOString().split('T')[0]}
+                placeholder='Fecha de nacimiento'
+                required
+              />
+              <button className='fadeIn'>Enviar</button>
+            </form>
+          )}
+      </div>
     </div>
   )
 }
