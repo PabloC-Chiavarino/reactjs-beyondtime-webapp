@@ -23,22 +23,22 @@
 }
 
 .userData__container--ring {
-   width: 500px;
-   height: 500px;
-   border: 10px solid rgba(255, 255, 255, 0.5);
+   width: 300px;
+   height: 300px;
+   border: 5px solid rgba(255, 255, 255, 0.5);
    border-radius: 50%;
    position: absolute;
-   bottom: 4.5rem;
+   bottom: 2.5rem;
 }
 
 .userData__container--secondRing,
 .userData__container--thirdRing {
-   width: 500px;
-   height: 500px;
-   border: 10px solid rgba(255, 255, 255, 0.5);
+   width: 300px;
+   height: 300px;
+   border: 5px solid rgba(255, 255, 255, 0.5);
    border-radius: 50%;
    position: absolute;
-   bottom: 4.5rem;
+   bottom: 2.5rem;
    opacity: 0;
    transition: opacity 0.2s;
    background: conic-gradient(
@@ -63,6 +63,8 @@
    font-weight: 400;
    color: #202020;
    animation: titleAnimation 1.5s ease forwards;
+   font-size: 21px;
+   margin-top: 4rem;
 }
 
 .userData__form {
@@ -70,10 +72,10 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 2rem;
-   height: 200px;
+   gap: 1rem;
+   height: 175px;
    z-index: 1;
-   top: 1.5rem;
+   top: 3.5rem;
 }
 
 .userData__form input {
@@ -81,7 +83,8 @@
    padding: 0.5rem;
    border: 1px solid #333;
    border-radius: 0.25rem;
-   width: 200px;
+   width: 150px;
+   height: 30px;
    animation-fill-mode: forwards;
 }
 
@@ -94,10 +97,9 @@
 }
 
 .userData__form button {
-   width: 150px;
-   height: 45px;
-   font-size: 1rem;
-   padding: 0.5rem 1rem;
+   width: 100px;
+   height: 35px;
+   font-size: 14px;
    margin-top: 1rem;
    border: none;
    border-radius: 4px;
@@ -111,4 +113,189 @@
    &:hover {
       background-color: #555;
    }
+}
+
+@media (min-width: 360px) {
+   .userData__container--ring {
+      width: 330px;
+      height: 330px;
+      border: 5px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 8rem;
+   }
+   
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 330px;
+      height: 330px;
+      border: 5px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 8rem;
+      opacity: 0;
+      transition: opacity 0.2s;
+      background: conic-gradient(
+         transparent 0deg 225deg,
+         rgba(9, 0, 166, 0.9) 220deg 240deg,
+         transparent 250deg 360deg
+      );
+      mask: radial-gradient(circle, transparent 68%, black 50.5%);
+      z-index: 1;
+   }
+   
+   .ringAnimation {
+      animation: ringRotate 1000ms linear;
+   }
+   
+   .ringAnimation--reverse {
+      animation: ringRotate 1000ms linear reverse;
+   }
+   
+   .userData__title {
+      position: absolute;
+      font-weight: 400;
+      color: #202020;
+      animation: titleAnimation 1.5s ease forwards;
+      font-size: 23px;
+      margin-top: 4rem;
+   }
+   
+   .userData__form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      height: 175px;
+      z-index: 1;
+      top: 2rem;
+   }
+   
+   .userData__form input {
+      opacity: 0;
+      padding: 0.5rem;
+      border: 1px solid #333;
+      border-radius: 0.25rem;
+      width: 150px;
+      height: 30px;
+      animation-fill-mode: forwards;
+   }
+   
+   .userData__form input:nth-child(1) {
+      animation-delay: 0.25s;
+   }
+   
+   .userData__form input:nth-child(2) {
+      animation-delay: 0.5s;
+   }
+   
+   .userData__form button {
+      width: 102px;
+      height: 37px;
+      font-size: 14px;
+   }
+}
+
+@media (min-width: 1366px) {
+   .userData__container {
+      width: 100dvw;
+      height: 100dvh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e6e6e6;
+   }
+   
+   .userData__container--ring {
+      width: 500px;
+      height: 500px;
+      border: 10px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 4.5rem;
+   }
+   
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 500px;
+      height: 500px;
+      border: 10px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 4.5rem;
+      opacity: 0;
+      transition: opacity 0.2s;
+      background: conic-gradient(
+         transparent 0deg 225deg,
+         rgba(9, 0, 166, 0.9) 220deg 240deg,
+         transparent 250deg 360deg
+      );
+      mask: radial-gradient(circle, transparent 68%, black 50.5%);
+      z-index: 1;
+   }
+   
+   .ringAnimation {
+      animation: ringRotate 1000ms linear;
+   }
+   
+   .ringAnimation--reverse {
+      animation: ringRotate 1000ms linear reverse;
+   }
+   
+   .userData__title {
+      position: absolute;
+      font-weight: 400;
+      color: #202020;
+      animation: titleAnimation 1.5s ease forwards;
+   }
+   
+   .userData__form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      height: 200px;
+      z-index: 1;
+      top: 1.5rem;
+   }
+   
+   .userData__form input {
+      opacity: 0;
+      padding: 0.5rem;
+      border: 1px solid #333;
+      border-radius: 0.25rem;
+      width: 200px;
+      animation-fill-mode: forwards;
+   }
+   
+   .userData__form input:nth-child(1) {
+      animation-delay: 0.25s;
+   }
+   
+   .userData__form input:nth-child(2) {
+      animation-delay: 0.5s;
+   }
+   
+   .userData__form button {
+      width: 150px;
+      height: 45px;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #333;
+      color: whitesmoke;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      animation-delay: 0.75s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      &:hover {
+         background-color: #555;
+      }
+   }
+   
 }

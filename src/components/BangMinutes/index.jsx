@@ -60,7 +60,7 @@ const BangMinutes = ({ userData }) => {
 
   return (
     <div className='bangMinutes__container fadeIn'>
-      <p className='bangMinutes__textA'>Han pasado <span>{formatNumber(totalMinutes)}</span> minutos desde tu nacimiento. ¿Sabías que cada minuto el universo se expande 4,700 km? Lo que significa que el universo se ha expandido <span>{formatNumber(totalExpansion)}</span> km desde tu existencia. Cada minuto, puedes expandir tus conocimientos,  tal como lo hace el universo.</p>
+      <p className='bangMinutes__textA'>{userData.name}, Han pasado <span>{formatNumber(totalMinutes)}</span> minutos desde tu nacimiento. ¿Sabías que cada minuto el universo se expande 4,700 km? Lo que significa que el universo se ha expandido <span>{formatNumber(totalExpansion)}</span> km desde tu existencia. Cada minuto, puedes expandir tus conocimientos,  tal como lo hace el universo.</p>
       <h1 className='bangMinutes__title'>Minutos vividos</h1>
       <div className='bangMinutes__subcontainer'>
         <div className='bangMinutes__core' />

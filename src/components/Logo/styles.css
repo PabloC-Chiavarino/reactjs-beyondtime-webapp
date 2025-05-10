@@ -10,7 +10,7 @@
 }
 
 .logo__container h1 {
-   font-size: 21px;
+   font-size: 18px;
    letter-spacing: 0.5px;
    color: #999999;
    font-weight: 400;
@@ -22,6 +22,46 @@
 }
 
 .logo__container img {
-   width: 31px;
+   width: 26px;
    opacity: 0.6;
+}
+
+@media (min-width: 360px) {
+   .logo__container h1 {
+      font-size: 20px;
+   }
+   
+   .logo__container img {
+      width: 28px;
+   }
+}
+
+@media (min-width: 1366px) {
+   .logo__container {
+      position: absolute;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 10px 0 0 20px;
+      z-index: 1;
+      cursor: pointer;
+   }
+   
+   .logo__container h1 {
+      font-size: 21px;
+      letter-spacing: 0.5px;
+      color: #999999;
+      font-weight: 400;
+   }
+   
+   .logo__container span {
+      color: #202020;
+      font-weight: 550;
+   }
+   
+   .logo__container img {
+      width: 31px;
+      opacity: 0.6;
+   }
 }

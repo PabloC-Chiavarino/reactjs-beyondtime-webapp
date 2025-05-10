@@ -1,17 +1,17 @@
 import { useEffect } from 'react'
 import './styles.css'
 
-const FlowScreen = ({ type, onFinish }) => {
+const FlowScreen = ({ userData, type, onFinish }) => {
   useEffect(() => {
-    setTimeout(onFinish, 1000)
+    const timeout = setTimeout(onFinish, 1000)
 
     return () => {
-      clearTimeout()
+      clearTimeout(timeout)
     }
   }, [type])
 
-  const content = type === 'welcome' ? 'Bienvenido' : 'Comencemos'
-
+  const content = type === 'welcome' ? 'Bienvenido' : `Gracias ${userData.name}, comencemos.`
+console.log(content)
   return (
     <div className='flowScreen__container'>
       <h1 className='flowScreen__title'>{content}</h1>

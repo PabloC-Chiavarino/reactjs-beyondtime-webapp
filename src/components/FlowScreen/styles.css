@@ -8,7 +8,7 @@
       transform: translateY(-50%) scale(0.5);
    }
    100% {
-      transform: translateY(-50%) scale(1.8);
+      transform: translateY(-50%) scale(1.3);
       opacity: 0;
    }
 }
@@ -23,9 +23,44 @@
 
 .flowScreen__title {
    opacity: 0;
-   font-size: 3rem;
+   font-size: 2.5rem;
    font-weight: 400;
    color: #202020;
    transform: scale(0.3);
    animation: flowAnimation 800ms ease-out forwards;
+}
+
+@media (min-width: 1366px) {
+   @keyframes flowAnimation {
+      0% {
+         opacity: 0.3;
+         transform: translateY(100%) scale(0.5);
+      }
+      50% {
+         opacity: 1;
+         transform: translateY(-50%) scale(0.5);
+      }
+      100% {
+         transform: translateY(-50%) scale(1.2);
+         opacity: 0;
+      }
+   }
+   
+   .flowScreen__container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   
+   .flowScreen__title {
+      opacity: 0;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #202020;
+      transform: scale(0.3);
+      animation: flowAnimation 800ms ease-out forwards;
+   }
+   
 }

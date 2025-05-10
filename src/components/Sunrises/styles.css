@@ -3,6 +3,7 @@
       opacity: 0;
       transform: translateY(175%);
    }
+
    100% {
       opacity: 1;
       transform: translateY(-75%);
@@ -13,6 +14,7 @@
    0% {
       opacity: 0;
    }
+
    100% {
       opacity: 1;
    }
@@ -43,10 +45,11 @@
    color: #202020;
    animation: titleAnimation 1s 0.5s ease-out forwards;
    opacity: 0;
+   font-size: 21px;
+   bottom: 13rem;
 }
 
 .sunrises__subcontainer {
-   width: 30rem;
    height: 70dvh;
    display: flex;
    justify-content: center;
@@ -59,27 +62,24 @@
 
 .sunrises__sky {
    position: absolute;
-   top: 6rem;
+   top: 7.5rem;
    border-radius: 50%;
-   background: linear-gradient(
-      to bottom,
-      rgba(0, 31, 77, 0.64) 10%,
-      rgba(0, 0, 0, 0) 100%
-   );
+   background: linear-gradient(to bottom,
+         rgba(0, 31, 77, 0.64) 10%,
+         rgba(0, 0, 0, 0) 100%);
    filter: blur(30px);
-   width: 22rem;
-   height: 50dvh;
+   width: 16rem;
+   height: 25dvh;
+
    &::after {
       content: "";
       position: absolute;
       width: inherit;
       height: inherit;
-      background: linear-gradient(
-         to bottom,
-         rgba(135, 206, 250, 0.9) 20%,
-         rgba(255, 223, 186, 0.8) 60%,
-         rgb(255, 255, 255) 100%
-      );
+      background: linear-gradient(to bottom,
+            rgba(135, 206, 250, 0.9) 20%,
+            rgba(255, 223, 186, 0.8) 60%,
+            rgb(255, 255, 255) 100%);
       opacity: 0;
       border-radius: 50%;
       animation: skyEffect 1.5s 3s ease-in-out forwards;
@@ -88,8 +88,8 @@
 
 .sunrises__sun {
    position: absolute;
-   width: 7.5rem;
-   height: 7.5rem;
+   width: 3.5rem;
+   height: 3.5rem;
    border-radius: 50%;
    background: radial-gradient(circle, #ffcc33, #ff4500 70%);
    transform: translateY(175%);
@@ -103,8 +103,10 @@
 .sunrises__textB {
    font-weight: 450;
    color: #717171;
-   width: 350px;
    opacity: 0;
+   position: absolute;
+   font-size: 13px;
+   overflow-y: scroll;
 }
 
 .sunrises__text,
@@ -114,8 +116,149 @@ span {
 
 .sunrises__textA {
    animation: textAnimationA 1s 2.5s ease-out forwards;
+   height: 55px;
+   left: 96%;
+   top: 230px;
+   width: 75%;
 }
 
 .sunrises__textB {
    animation: textAnimationB 1s 2.5s ease-out forwards;
+   right: 99%;
+   top: 206px;
+   width: 70%;
+   height: 70px;
+}
+
+@media (min-width: 360px) {
+   .sunrises__title {
+      font-size: 25px;
+      bottom: 18rem;
+   }
+
+   .sunrises__subcontainer {
+      height: 70dvh;
+      top: 30dvh;
+   }
+
+   .sunrises__sky {
+      top: 10.5rem;
+      width: 22rem;
+      height: 22.5dvh;
+   }
+
+   .sunrises__sun {
+      width: 4.5rem;
+      height: 4.5rem;
+   }
+
+   .sunrises__textA,
+   .sunrises__textB {
+      font-size: 15px;
+   }
+
+   .sunrises__textA {
+      height: 80px;
+      left: 85%;
+      top: 275px;
+      width: 80%;
+   }
+
+   .sunrises__textB {
+      right: 82%;
+      top: 305px;
+      width: 80%;
+      height: 80px;
+   }
+}
+
+@media (min-width: 1366px) {
+   .sunrises__container {
+      width: 100dvw;
+      height: 100dvh;
+      background-color: #e6e6e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .sunrises__title {
+      position: absolute;
+      font-weight: 400;
+      color: #202020;
+      animation: titleAnimation 1s 0.5s ease-out forwards;
+      opacity: 0;
+   }
+
+   .sunrises__subcontainer {
+      width: 30rem;
+      height: 70dvh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 30dvh;
+      animation: fadeIn 1s 2s ease-out forwards;
+      opacity: 0;
+   }
+
+   .sunrises__sky {
+      position: absolute;
+      top: 6rem;
+      border-radius: 50%;
+      background: linear-gradient(to bottom,
+            rgba(0, 31, 77, 0.64) 10%,
+            rgba(0, 0, 0, 0) 100%);
+      filter: blur(30px);
+      width: 22rem;
+      height: 50dvh;
+
+      &::after {
+         content: "";
+         position: absolute;
+         width: inherit;
+         height: inherit;
+         background: linear-gradient(to bottom,
+               rgba(135, 206, 250, 0.9) 20%,
+               rgba(255, 223, 186, 0.8) 60%,
+               rgb(255, 255, 255) 100%);
+         opacity: 0;
+         border-radius: 50%;
+         animation: skyEffect 1.5s 3s ease-in-out forwards;
+      }
+   }
+
+   .sunrises__sun {
+      position: absolute;
+      width: 7.5rem;
+      height: 7.5rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffcc33, #ff4500 70%);
+      transform: translateY(175%);
+      mix-blend-mode: screen;
+      opacity: 0;
+      animation: sunriseEffect 1.8s 3s ease-out forwards,
+         heatDistortionEffect 1.8s 3s ease-out forwards;
+   }
+
+   .sunrises__textA,
+   .sunrises__textB {
+      font-weight: 450;
+      color: #717171;
+      width: 350px;
+      opacity: 0;
+   }
+
+   .sunrises__text,
+   span {
+      color: #e74c3c;
+   }
+
+   .sunrises__textA {
+      animation: textAnimationA 1s 2.5s ease-out forwards;
+   }
+
+   .sunrises__textB {
+      animation: textAnimationB 1s 2.5s ease-out forwards;
+   }
 }

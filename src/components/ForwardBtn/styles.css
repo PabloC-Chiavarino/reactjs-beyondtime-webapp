@@ -40,11 +40,12 @@
    &::before {
       content: attr(data-text);
       position: absolute;
-      right: 4.5rem;
+      right: 2.5rem;
       color: #202020;
       opacity: 0;
       transition: opacity 0.3s;
       pointer-events: none;
+      font-size: .7rem;
    }
 }
 
@@ -53,8 +54,45 @@
 }
 
 .forward__img {
-   width: 48px;
-   height: 48px;
+   width: 25px;
+   height: 25px;
    cursor: pointer;
    animation: forwardEffect 2s 5s ease-in-out forwards;
+}
+
+@media (min-width: 360px) {
+
+   .forward__img--wrapper {
+      &::before {
+         right: 3rem;
+         font-size: .8rem;
+      }
+   }
+   
+   .forward__img--wrapper:hover::before {
+      opacity: 1;
+   }
+   
+   .forward__img {
+      width: 34px;
+      height: 34px;
+   }
+}
+
+@media (min-width: 1366px) {
+
+   .forward__img--wrapper {
+      &::before {
+         right: 4.5rem;
+      }
+   }
+   
+   .forward__img--wrapper:hover::before {
+      opacity: 1;
+   }
+   
+   .forward__img {
+      width: 48px;
+      height: 48px;
+   }
 }
