@@ -385,7 +385,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-42.5dvh);
+      transform: translateY(-45dvh);
       opacity: 1;
    }
 }
