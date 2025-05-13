@@ -391,110 +391,122 @@ span {
    }
 }
 
-@media (min-width: 1366px) {
-   .journeyClock__container {
-      width: 100dvw;
-      height: 100dvh;
-      background-color: #e6e6e6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-   
+@media (min-width: 1200px) {
    .journeyClock__title {
-      position: absolute;
-      font-weight: 400;
-      color: #202020;
-      animation: clockTitle 1s 0.5s ease-out forwards;
-      opacity: 0;
+      font-size: 30px;
    }
    
-   .journeyClock__subcontainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      top: 4.5rem;
-      opacity: 0;
-      animation: inEffect 0.8s 2s ease-out forwards;
+   .journeyClock__textA {
+      top: 365px;
    }
    
+   .journeyClock__textB {
+      top: 420px;
+   }
+
    .journeyClock__clock {
-      position: absolute;
-      width: 17rem;
-      height: 17rem;
-      border-radius: 50%;
-      border: 3.5px solid #202020;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transform: scale(-1);
+      width: 12.5rem;
+      height: 12.5rem;
    }
-   
-   .journeyClock__clock--hours,
-   .journeyClock__clock--minutes,
-   .journeyClock__clock--seconds {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      border-radius: 5px;
-      transform-origin: top;
-      opacity: 0;
-      animation: fadeIn 0.8s 2.8s ease forwards;
-   }
-   
+
    .journeyClock__clock--hours {
       width: 4px;
-      height: 25%;
-      background: #444444;
-      position: absolute;
-      transform: translateX(-50%);
+      height: 30%;
    }
    
    .journeyClock__clock--minutes {
       width: 3px;
-      height: 35%;
-      background: #717171;
-      transform: translateX(-50%);
+      height: 37%;
    }
    
    .journeyClock__clock--seconds {
       width: 2px;
       height: 38%;
-      background: #9c9c9c;
-      transform: translateX(-50%);
-      transition: transform 0.5s linear;
    }
    
    .journeyClock__clock--line {
-      position: absolute;
-      width: 1px;
-      height: 10px;
-      background-color: #202020;
-      left: 50%;
-      transform-origin: 50% 50%;
-      transform: translateY(120px);
-      --line-distance: 120px;
+      height: 4.5px;
+      --line-distance: 90px;
+   }
+}
+
+@media (min-width: 1366px) {
+   
+   .journeyClock__clock {
+      width: 13.5rem;
+      height: 13.5rem;
    }
    
-   .journeyClock__textA,
-   .journeyClock__textB {
-      font-weight: 450;
-      color: #717171;
-      width: 350px;
-      opacity: 0;
+   .journeyClock__clock--hours {
+      width: 5px;
+      height: 25%;
    }
    
-   .journeyClock__text,
-   span {
-      color: #e74c3c;
+   .journeyClock__clock--minutes {
+      width: 3.5px;
+      height: 35%;
+   }
+   
+   .journeyClock__clock--seconds {
+      width: 2px;
+      height: 38%;
+   }
+   
+   .journeyClock__clock--line {
+      width: 1.5px;
+      height: 4.5px;
+      --line-distance: 100px;
    }
    
    .journeyClock__textA {
-      animation: textAnimationA 1s 2.5s ease-out forwards;
+      top: 305px;
    }
    
    .journeyClock__textB {
-      animation: textAnimationB 1s 2.5s ease-out forwards;
+      top: 280px;
+   }
+}
+
+@media (min-width: 1440px) {
+   .journeyClock__title {
+      font-size: 32px;
+   }
+   
+   .journeyClock__textA {
+      top: 350px;
+      height: 160px;
+      font-size: 1.05rem;
+   }
+   
+   .journeyClock__textB {
+      top: 410px;
+      height: 160px;
+      font-size: 1.05rem;
+   }
+
+   .journeyClock__clock {
+      width: 15.5rem;
+      height: 15.5rem;
+   }
+
+   .journeyClock__clock--hours {
+      width: 5px;
+      height: 25%;
+   }
+   
+   .journeyClock__clock--minutes {
+      width: 3.5px;
+      height: 35%;
+   }
+   
+   .journeyClock__clock--seconds {
+      width: 2px;
+      height: 38%;
+   }
+   
+   .journeyClock__clock--line {
+      width: 1.5px;
+      height: 4.5px;
+      --line-distance: 115px;
    }
 }

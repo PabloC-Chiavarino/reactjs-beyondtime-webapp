@@ -289,80 +289,56 @@ span {
    }
 }
 
-@media (min-width: 1366px) {
-   .bangMinutes__container {
-      width: 100dvw;
-      height: 100dvh;
-      background-color: #e6e6e6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-
+@media (min-width: 1200px) {
    .bangMinutes__title {
-      position: absolute;
-      font-weight: 400;
-      color: #202020;
-      animation: bangTitle 1s 0.5s ease-out forwards;
-      opacity: 0;
-   }
-
-   .bangMinutes__subcontainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      top: 2rem;
-      animation: fadeIn 1s 2s ease-out forwards;
-      opacity: 0;
-   }
-
-   .bangMinutes__core {
-      position: absolute;
-      width: 8rem;
-      height: 8rem;
-      border-radius: 50%;
-      background: #202020;
-      z-index: 1;
-      animation: coreEffectA 1.8s 2s linear forwards, coreEffectB 1s 2.8s linear;
-   }
-
-   .bangMinutes__core--explosion {
-      position: absolute;
-      width: 25rem;
-      height: 25rem;
-      border-radius: 50%;
-      background: radial-gradient(circle,
-            rgba(140, 20, 15, 0.6) 10%,
-            rgba(231, 76, 60, 0.8) 40%);
-      z-index: 0;
-      opacity: 0;
-      animation: explosionEffect 1s 3.8s cubic-bezier(0, 0, 0, 1) forwards;
-   }
-
-   canvas {
-      position: absolute;
-      z-index: 0;
-   }
-
-   .bangMinutes__textA,
-   .bangMinutes__textB {
-      font-weight: 450;
-      color: #717171;
-      width: 350px;
-      opacity: 0;
-   }
-
-   .bangMinutes__text,
-   span {
-      color: #e74c3c;
+      font-size: 30px;
    }
 
    .bangMinutes__textA {
-      animation: textAnimationA 1s 2.5s ease-out forwards;
+      top: 365px;
    }
 
    .bangMinutes__textB {
-      animation: textAnimationB 1s 2.5s ease-out forwards;
+      top: 420px;
+   }
+
+   .bangMinutes__core--explosion {
+      width: 20rem;
+      height: 20rem;
+   }
+}
+
+@media (min-width: 1366px) {
+
+   .bangMinutes__core--explosion {
+      width: 25rem;
+      height: 25rem;
+   }
+
+   .bangMinutes__textA {
+      top: 305px;
+   }
+   
+   .bangMinutes__textB {
+      top: 280px;
+   }
+}
+
+@media (min-width: 1440px) {
+
+   .bangMinutes__title {
+      font-size: 32px;
+   }
+
+   .bangMinutes__textA {
+      top: 350px;
+      font-size: 1.05rem;
+      height: 160px;
+   }
+   
+   .bangMinutes__textB {
+      top: 410px;
+      font-size: 1.05rem;
+      height: 160px;
    }
 }

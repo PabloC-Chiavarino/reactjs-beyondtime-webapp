@@ -348,82 +348,57 @@ span {
    }
 }
 
-@media (min-width: 1366px) {
-   .beats__container {
-      width: 100dvw;
-      height: 100dvh;
-      background-color: #e6e6e6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-
+@media (min-width: 1200px) {
    .beats__title {
-      position: absolute;
-      font-weight: 400;
-      color: #202020;
-      animation: heartTitle 1s 0.5s ease-out forwards;
-      opacity: 0;
-      font-size: 21px;
-      bottom: 13rem;
-   }
-
-   .beats__textA,
-   .beats__textB {
-      font-weight: 450;
-      color: #717171;
-      width: 350px;
-      opacity: 0;
-   }
-
-   .beats__text,
-   span {
-      color: #e74c3c;
+      font-size: 30px;
    }
 
    .beats__textA {
-      animation: textAnimationA 1s 2.5s ease-out forwards;
+      top: 365px;
    }
 
    .beats__textB {
-      animation: textAnimationB 1s 2.5s ease-out forwards;
+      top: 420px;
+   }
+}
+
+@media (min-width: 1366px) {
+
+   .beats__textA {
+      top: 305px;
+   }
+   
+   .beats__textB {
+      top: 280px;
+   }
+}
+
+@media (min-width: 1440px) {
+
+   .beats__title {
+      font-size: 32px;
    }
 
-   .beats__subcontainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      top: 4.5rem;
-      animation: fadeIn 1s 2s ease-out forwards;
-      opacity: 0;
+   .beats__textA {
+      top: 350px;
+      font-size: 1.05rem;
+      height: 160px;
+   }
+   
+   .beats__textB {
+      top: 410px;
+      font-size: 1.05rem;
+      height: 160px;
    }
 
    .beats__heart {
-      position: absolute;
-      width: 5.5rem;
-      height: 5.5rem;
-      background: transparent;
-      z-index: 1;
-      animation: heartAnimation 1.8s 2.5s ease-in-out infinite;
+      width: 7.25rem;
+      height: 7.25rem;
    }
 
    .beat__first,
    .beat__second {
-      position: absolute;
-      opacity: 0;
-      width: 16rem;
-      height: 16rem;
-      background: rgba(255, 0, 0, 0.26);
-      box-shadow: 0 0 15px rgba(255, 0, 0, 0.89);
-      border-radius: 50%;
-   }
-
-   .beat__first {
-      animation: beatEffect 1.8s 2s ease-in-out infinite;
-   }
-
-   .beat__second {
-      animation: beatEffect 1.8s 2.4s ease-in-out infinite;
+      width: 22rem;
+      height: 22rem;
    }
 }
