@@ -13,16 +13,19 @@ function App () {
         setStep('user')
         break
       case 'user':
-        setStep('minutes')
+        setStep('thanks')
         userControl.current = true
         break
-      case 'minutes':
+      case 'thanks':
+        setStep('minutes')
+        break
+        case 'minutes':
         setStep('beats')
         break
-      case 'beats':
+        case 'beats':
         setStep('sunrises')
         break
-      case 'sunrises':
+        case 'sunrises':
         setStep('journey')
         userControl.current = false
         break
@@ -38,7 +41,8 @@ function App () {
   return (
     <div className='App'>
       <Logo onClick={() => setStep('welcome')} />
-      {step === 'welcome' && <FlowScreen userData={userData} type={step} onFinish={() => handleStep()} />}
+      {(step === 'welcome' || step === 'thanks') && <FlowScreen userData={userData} type={step} onFinish={() => handleStep()} />}
+      
       {userControl.current === true && <ForwardBtn handleClick={handleStep} />}
 
       {step === 'user' && <UserForm onComplete={(data) => handeUserData(data)} />}

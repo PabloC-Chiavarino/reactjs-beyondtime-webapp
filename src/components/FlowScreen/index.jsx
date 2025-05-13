@@ -8,7 +8,7 @@ const FlowScreen = ({ userData, type, onFinish }) => {
     return () => {
       clearTimeout(timeout)
     }
-  }, [type])
+  }, [])
 
   const content = type === 'welcome' ? 'Bienvenido' : `Gracias ${userData.name}, comencemos.`
 console.log(content)
