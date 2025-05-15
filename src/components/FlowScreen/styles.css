@@ -24,11 +24,17 @@
 
 .flowScreen__title {
    opacity: 0;
-   font-size: 2.5rem;
+   font-size: 1.3rem;
    font-weight: 400;
    color: #202020;
    transform: scale(0.3);
    animation: flowAnimation 800ms ease-out forwards;
+}
+
+@media screen and (orientation: landscape) and (min-width: 320px) {
+   .flowScreen__title {
+      font-size: 1.5rem;
+   }
 }
 
 @media (min-width: 1366px) {
@@ -46,11 +52,5 @@
          transform: translateY(-50%) scale(2);
          opacity: 0;
       }
-   }
-}
-
-@media screen and (orientation: landscape) and (max-height: 420px) {
-   .flowScreen__title {
-      font-size: 1.5rem;
    }
 }

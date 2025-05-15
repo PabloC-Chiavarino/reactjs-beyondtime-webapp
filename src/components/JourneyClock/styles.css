@@ -1,672 +1,867 @@
 @keyframes inEffect {
-   0% {
-      opacity: 0;
-      transform: scale(0);
-   }
-   100% {
-      opacity: 1;
-      transform: scale(1);
-   }
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes clockTitle {
-   0% {
-      transform: translateY(0);
-   }
-   50% {
-      transform: translateY(0);
-   }
-   100% {
-      transform: translateY(-25dvh);
-      opacity: 1;
-   }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25dvh);
+    opacity: 1;
+  }
 }
 
 .journeyClock__container {
-   width: 100dvw;
-   height: 100dvh;
-   background-color: #e6e6e6;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .journeyClock__title {
-   position: absolute;
-   font-weight: 400;
-   color: #202020;
-   animation: clockTitle 1s 0.5s ease-out forwards;
-   opacity: 0;
-   font-size: 21px;
-   bottom: 13rem;
+  position: absolute;
+  font-weight: 400;
+  color: #202020;
+  animation: clockTitle 1s 0.5s ease-out forwards;
+  opacity: 0;
+  font-size: 21px;
+  bottom: 13rem;
 }
 
 .journeyClock__subcontainer {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-   top: 2rem;
-   opacity: 0;
-   animation: inEffect 0.8s 2s ease-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 2rem;
+  opacity: 0;
+  animation: inEffect 0.8s 2s ease-out forwards;
 }
 
 .journeyClock__clock {
-   position: absolute;
-   width: 4rem;
-   height: 4rem;
-   border-radius: 50%;
-   border: 1px solid #202020;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   transform: scale(-1);
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(-1);
 }
 
 .journeyClock__clock--hours,
 .journeyClock__clock--minutes,
 .journeyClock__clock--seconds {
-   position: absolute;
-   top: 50%;
-   border-radius: 5px;
-   transform-origin: top;
-   opacity: 0;
-   animation: fadeIn 0.8s 2.8s ease forwards;
+  position: absolute;
+  top: 50%;
+  border-radius: 5px;
+  transform-origin: top;
+  opacity: 0;
+  animation: fadeIn 0.8s 2.8s ease forwards;
 }
 
 .journeyClock__clock--hours {
-   width: 2px;
-   height: 25%;
-   background: #444444;
-   position: absolute;
-   transform: translateX(-50%);
+  width: 2px;
+  height: 25%;
+  background: #444444;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 .journeyClock__clock--minutes {
-   width: 2px;
-   height: 35%;
-   background: #717171;
-   transform: translateX(-50%);
+  width: 2px;
+  height: 35%;
+  background: #717171;
+  transform: translateX(-50%);
 }
 
 .journeyClock__clock--seconds {
-   width: 1.5px;
-   height: 38%;
-   background: #9c9c9c;
-   transform: translateX(-50%);
-   transition: transform 0.5s linear;
+  width: 1.5px;
+  height: 38%;
+  background: #9c9c9c;
+  transform: translateX(-50%);
+  transition: transform 0.5s linear;
 }
 
 .journeyClock__clock--line {
-   position: absolute;
-   width: 1px;
-   height: 3.5px;
-   background-color: #202020;
-   left: 50%;
-   transform-origin: 50% 50%;
-   --line-distance: 27px;
+  position: absolute;
+  width: 1px;
+  height: 3.5px;
+  background-color: #202020;
+  left: 50%;
+  transform-origin: 50% 50%;
+  --line-distance: 27px;
 }
 
 .journeyClock__textA,
 .journeyClock__textB {
-   font-weight: 450;
-   color: #717171;
-   opacity: 0;
-   position: absolute;
-   font-size: 13px;
-   overflow-y: scroll;
+  font-weight: 450;
+  color: #717171;
+  opacity: 0;
+  position: absolute;
+  font-size: 13px;
+  overflow-y: scroll;
 }
 
 .journeyClock__text,
 span {
-   color: #e74c3c;
+  color: #e74c3c;
 }
 
 .journeyClock__textA {
-   animation: textAnimationA 1s 2.5s ease-out forwards;
-   height: 55px;
-   left: 96%;
-   top: 230px;
-   width: 75%;
+  animation: textAnimationA 1s 2.5s ease-out forwards;
+  height: 55px;
+  left: 96%;
+  top: 230px;
+  width: 75%;
 }
 
 .journeyClock__textB {
-   animation: textAnimationB 1s 2.5s ease-out forwards;
-   right: 99%;
-   top: 206px;
-   width: 70%;
-   height: 70px;
+  animation: textAnimationB 1s 2.5s ease-out forwards;
+  right: 99%;
+  top: 206px;
+  width: 70%;
+  height: 70px;
+}
+
+@media (orientation: landscape) and (min-width: 320px) {
+  .journeyClock__title {
+    font-size: 18px;
+    bottom: 9.5rem;
+  }
+
+  .journeyClock__textA,
+  .journeyClock__textB {
+    font-size: 14px;
+    width: 150px;
+    height: 60px;
+  }
+
+  .journeyClock__textA {
+    top: 212.5px;
+    left: 67%;
+  }
+
+  .journeyClock__textB {
+    top: 125px;
+    right: 67%;
+  }
+
+  .journeyClock__subcontainer {
+    top: 1rem;
+  }
+
+  .journeyClock__clock {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 2px;
+    height: 30%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 1.5px;
+    height: 37%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 1px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 2px;
+    --line-distance: 22px;
+  }
 }
 
 @media (min-width: 360px) {
-   .journeyClock__title {
-      font-size: 25px;
-      bottom: 18rem;
-   }
-   
-   .journeyClock__subcontainer {
-      top: 2.75rem;
-   }
-   
-   .journeyClock__clock {
-      width: 5.5rem;
-      height: 5.5rem;
-      border: 2px solid #202020;
-   }
-   
-   .journeyClock__clock--hours {
-      width: 3px;
-      height: 25%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 2px;
-      height: 35%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 1.5px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      height: 3.5px;
-      --line-distance: 39px;
-   }
-   
-   .journeyClock__textA,
-   .journeyClock__textB {
-      font-size: 14px;
-   }
-   
-   .journeyClock__textA {
-      height: 80px;
-      left: 85%;
-      top: 275px;
-      width: 80%;
-   }
-   
-   .journeyClock__textB {
-      right: 82%;
-      top: 305px;
-      width: 80%;
-      height: 80px;
-   }
+  .journeyClock__title {
+    font-size: 25px;
+    bottom: 18rem;
+  }
+
+  .journeyClock__subcontainer {
+    top: 2.75rem;
+  }
+
+  .journeyClock__clock {
+    width: 5.5rem;
+    height: 5.5rem;
+    border: 2px solid #202020;
+  }
+
+  .journeyClock__clock--hours {
+    width: 3px;
+    height: 25%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 2px;
+    height: 35%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 1.5px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 3.5px;
+    --line-distance: 39px;
+  }
+
+  .journeyClock__textA,
+  .journeyClock__textB {
+    font-size: 14px;
+  }
+
+  .journeyClock__textA {
+    height: 80px;
+    left: 85%;
+    top: 275px;
+    width: 80%;
+  }
+
+  .journeyClock__textB {
+    right: 82%;
+    top: 305px;
+    width: 80%;
+    height: 80px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 360px) {
+  .journeyClock__title {
+    font-size: 20px;
+    bottom: 10.5rem;
+  }
+  .journeyClock__textA,
+  .journeyClock__textB {
+    font-size: 14px;
+    width: 175px;
+    height: 80px;
+  }
+  .journeyClock__textA {
+    top: 230px;
+    left: 50%;
+  }
+
+  .journeyClock__textB {
+    top: 135px;
+    right: 50%;
+  }
+
+  .journeyClock__subcontainer {
+    top: 2rem;
+  }
+
+  .journeyClock__clock {
+    width: 5.2rem;
+    height: 5.2rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 3px;
+    height: 30%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 2px;
+    height: 37%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 1.5px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 3px;
+    --line-distance: 37px;
+  }
 }
 
 @media (min-width: 400px) {
-   .journeyClock__title {
-      font-size: 26px;
-      bottom: 21rem;
-   }
-   
-   .journeyClock__subcontainer {
-      top: 2.75rem;
-   }
-   
-   .journeyClock__clock {
-      width: 6.5rem;
-      height: 6.5rem;
-   }
-   
-   .journeyClock__clock--hours {
-      width: 3.5px;
-      height: 30%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 2.5px;
-      height: 37%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 2px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      height: 4px;
-      --line-distance: 46.5px;
-   }
-   
-   .journeyClock__textA,
-   .journeyClock__textB {
-      font-size: 15px;
-   }
-   
-   .journeyClock__textA {
-      left: 73%;
-      top: 304px;
-   }
-   
-   .journeyClock__textB {
-      right: 74%;
-      top: 365px;
-   }
+  .journeyClock__title {
+    font-size: 26px;
+    bottom: 21rem;
+  }
+
+  .journeyClock__subcontainer {
+    top: 2.75rem;
+  }
+
+  .journeyClock__clock {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 3.5px;
+    height: 30%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 2.5px;
+    height: 37%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 2px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 4px;
+    --line-distance: 46.5px;
+  }
+
+  .journeyClock__textA,
+  .journeyClock__textB {
+    font-size: 15px;
+  }
+
+  .journeyClock__textA {
+    left: 73%;
+    top: 304px;
+  }
+
+  .journeyClock__textB {
+    right: 74%;
+    top: 365px;
+  }
 }
 
 @media (min-width: 400px) and (min-height: 700px) {
+  .journeyClock__title {
+    bottom: 55%;
+    font-size: 27px;
+  }
 
-   .journeyClock__title {
-      bottom: 55%;
-      font-size: 27px;
-   }
-   
-   .journeyClock__textA {
-      left: 74%;
-      top: 304px;
-      height: 105px;
-   }
-   
-   .journeyClock__textB {
-      right: 73%;
-      top: 450px;
-      height: 105px;
-   }
+  .journeyClock__textA {
+    left: 74%;
+    top: 304px;
+    height: 105px;
+  }
 
-   .journeyClock__subcontainer {
-      top: 2.5rem;
-   }
+  .journeyClock__textB {
+    right: 73%;
+    top: 450px;
+    height: 105px;
+  }
 
-   .journeyClock__clock {
-      width: 7.5rem;
-      height: 7.5rem;
-   }
+  .journeyClock__subcontainer {
+    top: 2.5rem;
+  }
 
-   .journeyClock__clock--hours {
-      width: 3px;
-      height: 30%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 2px;
-      height: 37%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 1px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      height: 4px;
-      --line-distance: 54px;
-   }
+  .journeyClock__clock {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 3px;
+    height: 30%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 2px;
+    height: 37%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 1px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 4px;
+    --line-distance: 54px;
+  }
 }
 
 @media (min-width: 480px) {
-   .journeyClock__textA {
-      left: 65%;
-   }
-   
-   .journeyClock__textB {
-      right: 65%;
-      top: 475px;
-   }
+  .journeyClock__textA {
+    left: 65%;
+  }
+
+  .journeyClock__textB {
+    right: 65%;
+    top: 475px;
+  }
+
+  .journeyClock__clock {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 3.5px;
+    height: 30%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 2.5px;
+    height: 37%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 2px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 4px;
+    --line-distance: 58px;
+  }
 }
 
-@media (orientation: landscape) and (min-height: 320px) {
+@media (orientation: landscape) and (min-width: 400px) {
+  .journeyClock__title {
+    font-size: 23px;
+    bottom: 14rem;
+  }
+  .journeyClock__textA,
+  .journeyClock__textB {
+    font-size: 15px;
+    width: 205px;
+    height: 80px;
+  }
+  .journeyClock__textA {
+    top: 240px;
+    left: 20rem;
+  }
 
-   .journeyClock__title {
-      font-size: 18px;
-      bottom: 9.5rem;
-   }
+  .journeyClock__textB {
+    top: 175px;
+    right: 20rem;
+  }
 
-   .journeyClock__textA,
-   .journeyClock__textB {
-      font-size: 14px;
-      width: 150px;
-      height: 60px;
-   }
+  .journeyClock__subcontainer {
+    top: 2rem;
+  }
 
-   .journeyClock__textA {
-      top: 212.5px;
-      left: 67%;
-   }
+  .journeyClock__clock {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
 
-   .journeyClock__textB {
-      top: 125px;
-      right: 67%;
-   }
+  .journeyClock__clock--hours {
+    width: 3px;
+    height: 30%;
+  }
 
-   .journeyClock__subcontainer {
-      top: 1rem;
-   }
+  .journeyClock__clock--minutes {
+    width: 2px;
+    height: 37%;
+  }
 
-   .journeyClock__clock {
-      width: 3.2rem;
-      height: 3.2rem;
-   }
+  .journeyClock__clock--seconds {
+    width: 1.5px;
+    height: 38%;
+  }
 
-   .journeyClock__clock--hours {
-      width: 2px;
-      height: 30%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 1.5px;
-      height: 37%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 1px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      height: 2px;
-      --line-distance: 22px;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 360px) {
-
-   .journeyClock__title {
-      font-size: 20px;
-      bottom: 10.5rem;
-   }
-   .journeyClock__textA,
-   .journeyClock__textB {
-      font-size: 14px;
-      width: 175px;
-      height: 80px;
-   }
-   .journeyClock__textA {
-      top: 230px;
-      left: 50%;
-   }
-   
-   .journeyClock__textB {
-      top: 135px;
-      right: 50%;
-   }
-
-   .journeyClock__subcontainer {
-      top: 2rem;
-   }
-
-   .journeyClock__clock {
-      width: 5.2rem;
-      height: 5.2rem;
-   }
-
-   .journeyClock__clock--hours {
-      width: 3px;
-      height: 30%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 2px;
-      height: 37%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 1.5px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      height: 3px;
-      --line-distance: 37px;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 400px) {
-
-   .journeyClock__title {
-      font-size: 23px;
-      bottom: 14rem;
-   }
-   .journeyClock__textA,
-   .journeyClock__textB {
-      font-size: 15px;
-      width: 205px;
-      height: 80px;
-   }
-   .journeyClock__textA {
-      top: 240px;
-      left: 20rem;
-   }
-   
-   .journeyClock__textB {
-      top: 175px;
-      right: 20rem;
-   }
-
-   .journeyClock__subcontainer {
-      top: 2rem;
-   }
-
-   .journeyClock__clock {
-      width: 7.5rem;
-      height: 7.5rem;
-   }
-
-   .journeyClock__clock--hours {
-      width: 3px;
-      height: 30%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 2px;
-      height: 37%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 1.5px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      height: 3px;
-      --line-distance: 55px;
-   }
+  .journeyClock__clock--line {
+    height: 3px;
+    --line-distance: 55px;
+  }
 }
 
 @media (min-width: 768px) {
-   .journeyClock__title {
-      bottom: 55%;
-      font-size: 30px;
-   }
-   
-   .journeyClock__textA {
-      left: 45%;
-      top: 365px;
-   }
-   
-   .journeyClock__textB {
-      right: 44%;
-      top: 665px;
-   }
+  .journeyClock__title {
+    bottom: 55%;
+    font-size: 30px;
+  }
 
-   .journeyClock__clock {
-      width: 10.5rem;
-      height: 10.5rem;
-   }
+  .journeyClock__textA {
+    left: 45%;
+    top: 365px;
+  }
 
-   .journeyClock__clock--hours {
-      width: 4px;
-      height: 30%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 3px;
-      height: 37%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 2px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      height: 4.5px;
-      --line-distance: 78px;
-   }
+  .journeyClock__textB {
+    right: 44%;
+    top: 665px;
+  }
+
+  .journeyClock__clock {
+    width: 10.5rem;
+    height: 10.5rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 4px;
+    height: 30%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 3px;
+    height: 37%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 2px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 4.5px;
+    --line-distance: 78px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .journeyClock__title {
+    font-size: 22px;
+    bottom: 10rem;
+  }
+  .journeyClock__textA,
+  .journeyClock__textB {
+    font-size: 14px;
+    width: 195px;
+    height: 80px;
+  }
+  .journeyClock__textA {
+    top: 215px;
+    left: 20rem;
+  }
+
+  .journeyClock__textB {
+    top: 100px;
+    right: 20rem;
+  }
+
+  .journeyClock__subcontainer {
+    top: 1.5rem;
+  }
+
+  .journeyClock__clock {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 3.5px;
+    height: 30%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 2.5px;
+    height: 37%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 2px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 3px;
+    --line-distance: 58px;
+  }
 }
 
 @media (min-width: 1024px) {
-   .journeyClock__title {
-      bottom: 55%;
-      font-size: 30px;
-   }
-   
-   .journeyClock__textA {
-      left: 28%;
-      top: 315px;
-      width: 350px;
-   }
-   
-   .journeyClock__textB {
-      right: 28%;
-      top: 350px;
-      width: 350px;
-   }
+  @keyframes clockTitle {
+    0% {
+      transform: translateY(0);
+    }
 
-   .journeyClock__clock {
-      width: 10.5rem;
-      height: 10.5rem;
-   }
+    50% {
+      transform: translateY(0);
+    }
 
-   .journeyClock__clock--hours {
-      width: 4px;
-      height: 30%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 3px;
-      height: 37%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 2px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      height: 4.5px;
-      --line-distance: 75px;
-   }
+    100% {
+      transform: translateY(-50dvh);
+      opacity: 1;
+    }
+  }
+
+  .journeyClock__title {
+    font-size: 26px;
+  }
+
+  .journeyClock__textA,
+  .journeyClock__textB {
+    font-size: 15px;
+    width: 300px;
+    height: 160px;
+  }
+
+  .journeyClock__textA {
+    left: 20rem;
+    top: 315px;
+  }
+
+  .journeyClock__textB {
+    right: 20rem;
+    top: 350px;
+  }
+
+  .journeyClock__clock {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 4px;
+    height: 30%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 3px;
+    height: 37%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 2px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 4.5px;
+    --line-distance: 73px;
+  }
 }
 
 @media (min-width: 1200px) {
-   .journeyClock__title {
-      font-size: 30px;
-   }
-   
-   .journeyClock__textA {
-      top: 305px;
-      height: 170px;
-   }
-   
-   .journeyClock__textB {
-      top: 330px;
-      height: 170px;
-   }
+  .journeyClock__title {
+    font-size: 30px;
+  }
 
-   .journeyClock__clock {
-      width: 12.5rem;
-      height: 12.5rem;
-   }
+  .journeyClock__textA {
+    top: 305px;
+    height: 170px;
+  }
 
-   .journeyClock__clock--hours {
-      width: 4px;
-      height: 30%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 3px;
-      height: 37%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 2px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      height: 4.5px;
-      --line-distance: 90px;
-   }
+  .journeyClock__textB {
+    top: 330px;
+    height: 170px;
+  }
+
+  .journeyClock__clock {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 4px;
+    height: 30%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 3px;
+    height: 37%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 2px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    height: 4.5px;
+    --line-distance: 90px;
+  }
 }
 
 @media (min-width: 1366px) {
-   
-   .journeyClock__clock {
-      width: 13.5rem;
-      height: 13.5rem;
-   }
-   
-   .journeyClock__clock--hours {
-      width: 5px;
-      height: 25%;
-   }
-   
-   .journeyClock__clock--minutes {
-      width: 3.5px;
-      height: 35%;
-   }
-   
-   .journeyClock__clock--seconds {
-      width: 2px;
-      height: 38%;
-   }
-   
-   .journeyClock__clock--line {
-      width: 1.5px;
-      height: 4.5px;
-      --line-distance: 100px;
-   }
-   
-   .journeyClock__textA {
-      top: 305px;
-   }
-   
-   .journeyClock__textB {
-      top: 280px;
-   }
+  .journeyClock__clock {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 5px;
+    height: 25%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 3.5px;
+    height: 35%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 2px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    width: 1.5px;
+    height: 4.5px;
+    --line-distance: 88px;
+  }
+
+  .journeyClock__textA {
+    top: 305px;
+    height: 180px;
+    left: 23rem;
+  }
+
+  .journeyClock__textB {
+    top: 300px;
+    right: 23rem;
+  }
 }
 
 @media (min-width: 1440px) {
+  .journeyClock__title {
+    font-size: 32px;
+  }
+
+  .journeyClock__textA,
+  .journeyClock__textB {
+    font-size: 16px;
+    width: 350px;
+    height: 140px;
+  }
+
+  .journeyClock__textA {
+    top: 400px;
+    height: 180px;
+    font-size: 1.05rem;
+  }
+
+  .journeyClock__textB {
+    top: 410px;
+    height: 180px;
+    font-size: 1.05rem;
+  }
+
+  .journeyClock__subcontainer {
+    top: 3.5rem;
+  }
+
+  .journeyClock__clock {
+    width: 13.5rem;
+    height: 13.5rem;
+  }
+
+  .journeyClock__clock--hours {
+    width: 5px;
+    height: 25%;
+  }
+
+  .journeyClock__clock--minutes {
+    width: 3.5px;
+    height: 35%;
+  }
+
+  .journeyClock__clock--seconds {
+    width: 2px;
+    height: 38%;
+  }
+
+  .journeyClock__clock--line {
+    width: 1.5px;
+    height: 4.5px;
+    --line-distance: 100px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .journeyClock__textA {
+    top: 400px;
+    left: 25rem;
+  }
+
+  .journeyClock__textB {
+    right: 25rem;
+  }
+
+  .journeyClock__subcontainer {
+    top: 4.5rem;
+  }
+
+  .journeyClock__clock {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .journeyClock__clock--line {
+    --line-distance: 112px;
+  }
+}
+
+@media (min-width: 1920px) {
+
+      @keyframes clockTitle {
+      0% {
+         transform: translateY(0);
+      }
+
+      50% {
+         transform: translateY(0);
+      }
+
+      100% {
+         transform: translateY(-60dvh);
+         opacity: 1;
+      }
+   }
+
    .journeyClock__title {
-      font-size: 32px;
+      font-size: 33px;
    }
-   
-   .journeyClock__textA {
-      top: 350px;
-      height: 180px;
-      font-size: 1.05rem;
-   }
-   
+
+   .journeyClock__textA,
    .journeyClock__textB {
-      top: 410px;
+      font-size: 1.1rem;
+      width: 400px;
       height: 180px;
-      font-size: 1.05rem;
+   }
+
+   .journeyClock__textA {
+      top: 425px;
+      left: 28rem;
+   }
+
+   .journeyClock__textB {
+      right: 28rem;
+      top: 425px;
+   }
+
+   .journeyClock__subcontainer {
+      top: 1.5rem;
    }
 
    .journeyClock__clock {
-      width: 15.5rem;
-      height: 15.5rem;
+      width: 17rem;
+      height: 17rem;
    }
 
    .journeyClock__clock--hours {
       width: 5px;
       height: 25%;
    }
-   
+
    .journeyClock__clock--minutes {
-      width: 3.5px;
+      width: 4px;
       height: 35%;
    }
-   
+
    .journeyClock__clock--seconds {
-      width: 2px;
+      width: 3px;
       height: 38%;
    }
-   
+
    .journeyClock__clock--line {
-      width: 1.5px;
-      height: 4.5px;
-      --line-distance: 115px;
+      --line-distance: 128px;
    }
 }

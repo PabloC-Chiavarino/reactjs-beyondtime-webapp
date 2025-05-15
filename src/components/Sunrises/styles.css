@@ -1,607 +1,752 @@
 @keyframes sunriseEffect {
-   0% {
-      opacity: 0;
-      transform: translateY(175%);
-   }
+  0% {
+    opacity: 0;
+    transform: translateY(175%);
+  }
 
-   100% {
-      opacity: 1;
-      transform: translateY(-75%);
-   }
+  100% {
+    opacity: 1;
+    transform: translateY(-75%);
+  }
 }
 
 @keyframes skyEffect {
-   0% {
-      opacity: 0;
-   }
+  0% {
+    opacity: 0;
+  }
 
-   100% {
-      opacity: 1;
-   }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes heatDistortionEffect {
-   0% {
-      filter: url(#heatDistortion);
-   }
+  0% {
+    filter: url(#heatDistortion);
+  }
 
-   100% {
-      filter: url(#heatDistortion);
-   }
+  100% {
+    filter: url(#heatDistortion);
+  }
 }
 
 @keyframes sunrisesTitle {
-   0% {
-      transform: translateY(0);
-   }
+  0% {
+    transform: translateY(0);
+  }
 
-   50% {
-      transform: translateY(0);
-   }
+  50% {
+    transform: translateY(0);
+  }
 
-   100% {
-      transform: translateY(-25dvh);
-      opacity: 1;
-   }
+  100% {
+    transform: translateY(-25dvh);
+    opacity: 1;
+  }
 }
 
 .sunrises__container {
-   width: 100dvw;
-   height: 100dvh;
-   background-color: #e6e6e6;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sunrises__title {
-   position: absolute;
-   font-weight: 400;
-   color: #202020;
-   animation: sunrisesTitle 1s 0.5s ease-out forwards;
-   opacity: 0;
-   font-size: 21px;
-   bottom: 13rem;
+  position: absolute;
+  font-weight: 400;
+  color: #202020;
+  animation: sunrisesTitle 1s 0.5s ease-out forwards;
+  opacity: 0;
+  font-size: 21px;
+  bottom: 13rem;
 }
 
 .sunrises__subcontainer {
-   height: 70dvh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   top: 30dvh;
-   animation: fadeIn 1s 2s ease-out forwards;
-   opacity: 0;
+  height: 70dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30dvh;
+  animation: fadeIn 1s 2s ease-out forwards;
+  opacity: 0;
 }
 
 .sunrises__sky {
-   position: absolute;
-   top: 7.5rem;
-   border-radius: 50%;
-   background: linear-gradient(to bottom,
-         rgba(0, 31, 77, 0.64) 10%,
-         rgba(0, 0, 0, 0) 100%);
-   filter: blur(30px);
-   width: 16rem;
-   height: 25dvh;
+  position: absolute;
+  top: 7.5rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 31, 77, 0.64) 10%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(30px);
+  width: 16rem;
+  height: 25dvh;
 
-   &::after {
-      content: "";
-      position: absolute;
-      width: inherit;
-      height: inherit;
-      background: linear-gradient(to bottom,
-            rgba(135, 206, 250, 0.9) 20%,
-            rgba(255, 223, 186, 0.8) 60%,
-            rgb(255, 255, 255) 100%);
-      opacity: 0;
-      border-radius: 50%;
-      animation: skyEffect 1.5s 3s ease-in-out forwards;
-   }
+  &::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(
+      to bottom,
+      rgba(135, 206, 250, 0.9) 20%,
+      rgba(255, 223, 186, 0.8) 60%,
+      rgb(255, 255, 255) 100%
+    );
+    opacity: 0;
+    border-radius: 50%;
+    animation: skyEffect 1.5s 3s ease-in-out forwards;
+  }
 }
 
 .sunrises__sun {
-   position: absolute;
-   width: 3.5rem;
-   height: 3.5rem;
-   border-radius: 50%;
-   background: radial-gradient(circle, #ffcc33, #ff4500 70%);
-   transform: translateY(175%);
-   mix-blend-mode: screen;
-   opacity: 0;
-   animation: sunriseEffect 1.8s 3s ease-out forwards,
-      heatDistortionEffect 1.8s 3s ease-out forwards;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffcc33, #ff4500 70%);
+  transform: translateY(175%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: sunriseEffect 1.8s 3s ease-out forwards,
+    heatDistortionEffect 1.8s 3s ease-out forwards;
 }
 
 .sunrises__textA,
 .sunrises__textB {
-   font-weight: 450;
-   color: #717171;
-   opacity: 0;
-   position: absolute;
-   font-size: 13px;
-   overflow-y: scroll;
+  font-weight: 450;
+  color: #717171;
+  opacity: 0;
+  position: absolute;
+  font-size: 13px;
+  overflow-y: scroll;
 }
 
 .sunrises__text,
 span {
-   color: #e74c3c;
+  color: #e74c3c;
 }
 
 .sunrises__textA {
-   animation: textAnimationA 1s 2.5s ease-out forwards;
-   height: 55px;
-   left: 96%;
-   top: 230px;
-   width: 75%;
+  animation: textAnimationA 1s 2.5s ease-out forwards;
+  height: 55px;
+  left: 96%;
+  top: 230px;
+  width: 75%;
 }
 
 .sunrises__textB {
-   animation: textAnimationB 1s 2.5s ease-out forwards;
-   right: 99%;
-   top: 206px;
-   width: 70%;
-   height: 70px;
+  animation: textAnimationB 1s 2.5s ease-out forwards;
+  right: 99%;
+  top: 206px;
+  width: 70%;
+  height: 70px;
+}
+
+@media (orientation: landscape) and (min-width: 320px) {
+  .sunrises__title {
+    font-size: 18px;
+    bottom: 9.5rem;
+  }
+
+  .sunrises__textA,
+  .sunrises__textB {
+    font-size: 14px;
+    width: 150px;
+    height: 60px;
+  }
+
+  .sunrises__textA {
+    top: 212.5px;
+    left: 67%;
+  }
+
+  .sunrises__textB {
+    top: 125px;
+    right: 67%;
+  }
+
+  .sunrises__subcontainer {
+    top: 6rem;
+  }
+
+  .sunrises__sky {
+    width: 10rem;
+    height: 40dvh;
+    top: 5.5rem;
+  }
+
+  .sunrises__sun {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 @media (min-width: 360px) {
+  .sunrises__title {
+    font-size: 25px;
+    bottom: 18rem;
+  }
 
-   .sunrises__title {
-      font-size: 25px;
-      bottom: 18rem;
-   }
+  .sunrises__subcontainer {
+    height: 70dvh;
+    top: 30dvh;
+  }
 
-   .sunrises__subcontainer {
-      height: 70dvh;
-      top: 30dvh;
-   }
+  .sunrises__sky {
+    top: 10.5rem;
+    width: 22rem;
+    height: 22.5dvh;
+  }
 
-   .sunrises__sky {
-      top: 10.5rem;
-      width: 22rem;
-      height: 22.5dvh;
-   }
+  .sunrises__sun {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 
-   .sunrises__sun {
-      width: 4.5rem;
-      height: 4.5rem;
-   }
+  .sunrises__textA,
+  .sunrises__textB {
+    font-size: 14px;
+  }
 
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 14px;
-   }
+  .sunrises__textA {
+    height: 80px;
+    left: 85%;
+    top: 275px;
+    width: 80%;
+  }
 
-   .sunrises__textA {
-      height: 80px;
-      left: 85%;
-      top: 275px;
-      width: 80%;
-   }
+  .sunrises__textB {
+    right: 82%;
+    top: 305px;
+    width: 80%;
+    height: 80px;
+  }
+}
 
-   .sunrises__textB {
-      right: 82%;
-      top: 305px;
-      width: 80%;
-      height: 80px;
-   }
+@media (orientation: landscape) and (min-width: 360px) {
+  .sunrises__title {
+    font-size: 20px;
+    bottom: 10.5rem;
+  }
+  .sunrises__textA,
+  .sunrises__textB {
+    font-size: 14px;
+    width: 175px;
+    height: 80px;
+  }
+  .sunrises__textA {
+    top: 230px;
+    left: 50%;
+  }
+
+  .sunrises__textB {
+    top: 135px;
+    right: 50%;
+  }
+
+  .sunrises__sun {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .sunrises__sky {
+    width: 10rem;
+    height: 40dvh;
+    top: 5.5rem;
+  }
+
+  .sunrises__subcontainer {
+    top: 8rem;
+  }
 }
 
 @media (min-width: 400px) {
+  @keyframes sunriseEffect {
+    0% {
+      opacity: 0;
+      transform: translateY(175%);
+    }
 
-   @keyframes sunriseEffect {
-      0% {
-         opacity: 0;
-         transform: translateY(175%);
-      }
+    100% {
+      opacity: 1;
+      transform: translateY(-90%);
+    }
+  }
 
-      100% {
-         opacity: 1;
-         transform: translateY(-90%);
-      }
-   }
+  .sunrises__title {
+    font-size: 26px;
+    bottom: 21rem;
+  }
 
-   .sunrises__title {
-      font-size: 26px;
-      bottom: 21rem;
-   }
+  .sunrises__subcontainer {
+    height: 70dvh;
+    top: 30dvh;
+  }
 
-   .sunrises__subcontainer {
-      height: 70dvh;
-      top: 30dvh;
-   }
+  .sunrises__sky {
+    top: 12rem;
+  }
 
-   .sunrises__sky {
-      top: 12rem;
-   }
+  .sunrises__sun {
+    width: 5rem;
+    height: 5rem;
+  }
 
-   .sunrises__sun {
-      width: 5rem;
-      height: 5rem;
-   }
+  .sunrises__textA,
+  .sunrises__textB {
+    font-size: 15px;
+  }
 
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 15px;
-   }
+  .sunrises__textA {
+    left: 74%;
+    top: 304px;
+  }
 
-   .sunrises__textA {
-      left: 74%;
-      top: 304px;
-   }
-
-   .sunrises__textB {
-      right: 73%;
-      top: 365px;
-   }
+  .sunrises__textB {
+    right: 73%;
+    top: 365px;
+  }
 }
 
 @media (min-width: 400px) and (min-height: 700px) {
+  @keyframes sunriseEffect {
+    0% {
+      opacity: 0;
+      transform: translateY(175%);
+    }
 
-   @keyframes sunriseEffect {
-      0% {
-         opacity: 0;
-         transform: translateY(175%);
-      }
+    100% {
+      opacity: 1;
+      transform: translateY(-120%);
+    }
+  }
 
-      100% {
-         opacity: 1;
-         transform: translateY(-120%);
-      }
-   }
+  .sunrises__title {
+    bottom: 55%;
+    font-size: 27px;
+  }
 
-   .sunrises__title {
-      bottom: 55%;
-      font-size: 27px;
-   }
+  .sunrises__textA {
+    left: 74%;
+    top: 304px;
+    height: 105px;
+  }
 
-   .sunrises__textA {
-      left: 74%;
-      top: 304px;
-      height: 105px;
-   }
+  .sunrises__textB {
+    right: 73%;
+    top: 450px;
+    height: 105px;
+  }
 
-   .sunrises__textB {
-      right: 73%;
-      top: 450px;
-      height: 105px;
-   }
+  .sunrises__sun {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
 
-   .sunrises__sun {
-      width: 5.5rem;
-      height: 5.5rem;
-   }
-
-   .sunrises__sky {
-      width: 25rem;
-      height: 28dvh;
-   }
+  .sunrises__sky {
+    width: 25rem;
+    height: 28dvh;
+  }
 }
 
 @media (min-width: 480px) {
-   .sunrises__textA {
-      left: 65%;
-   }
+  .sunrises__textA {
+    left: 65%;
+  }
 
-   .sunrises__textB {
-      right: 65%;
-   }
+  .sunrises__textB {
+    right: 65%;
+  }
 }
 
-@media (orientation: landscape) and (min-height: 320px) {
+@media (orientation: landscape) and (min-width: 400px) {
+  .sunrises__title {
+    font-size: 23px;
+    bottom: 12rem;
+  }
+  .sunrises__textA,
+  .sunrises__textB {
+    font-size: 15px;
+    width: 205px;
+    height: 80px;
+  }
+  .sunrises__textA {
+    top: 240px;
+    left: 20rem;
+  }
 
-   .sunrises__title {
-      font-size: 18px;
-      bottom: 9.5rem;
-   }
+  .sunrises__textB {
+    top: 175px;
+    right: 20rem;
+  }
 
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 14px;
-      width: 150px;
-      height: 60px;
-   }
+  .sunrises__subcontainer {
+    top: 11rem;
+  }
 
-   .sunrises__textA {
-      top: 212.5px;
-      left: 67%;
-   }
+  .sunrises__sun {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 
-   .sunrises__textB {
-      top: 125px;
-      right: 67%;
-   }
-
-   .sunrises__subcontainer {
-      top: 6rem;
-   }
-
-   .sunrises__sky {
-      width: 10rem;
-      height: 40dvh;
-      top: 5.5rem;
-   }
-
-   .sunrises__sun {
-      width: 3rem;
-      height: 3rem;
-
-   }
+  .sunrises__sky {
+    width: 15rem;
+    height: 40dvh;
+    top: 3rem;
+  }
 }
 
-@media (orientation: landscape) and (min-height: 360px) {
+@media (orientation: landscape) and (min-width: 480px) {
+  .sunrises__title {
+    font-size: 24px;
+    bottom: 12rem;
+  }
+  .sunrises__textA,
+  .sunrises__textB {
+    font-size: 15px;
+    width: 220px;
+  }
+  .sunrises__textA {
+    top: 285px;
+    left: 20rem;
+  }
 
-   .sunrises__title {
-      font-size: 20px;
-      bottom: 10.5rem;
-   }
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 14px;
-      width: 175px;
-      height: 80px;
-   }
-   .sunrises__textA {
-      top: 230px;
-      left: 50%;
-   }
-   
-   .sunrises__textB {
-      top: 135px;
-      right: 50%;
-   }
+  .sunrises__textB {
+    top: 195px;
+    right: 20rem;
+  }
 
-   .sunrises__sun {
-      width: 3.5rem;
-      height: 3.5rem;
-   }
+  .sunrises__subcontainer {
+    top: 14rem;
+  }
 
-   .sunrises__sky {
-      width: 10rem;
-      height: 40dvh;
-      top: 5.5rem;
-   }
+  .sunrises__sun {
+    width: 4.75rem;
+    height: 4.75rem;
+  }
 
-   .sunrises__subcontainer {
-      top: 8rem;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 400px) {
-
-   .sunrises__title {
-      font-size: 23px;
-      bottom: 12rem;
-   }
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 15px;
-      width: 205px;
-      height: 80px;
-   }
-   .sunrises__textA {
-      top: 240px;
-      left: 20rem;
-   }
-   
-   .sunrises__textB {
-      top: 175px;
-      right: 20rem;
-   }
-
-   .sunrises__subcontainer {
-      top: 11rem;
-   }
-
-   .sunrises__sun {
-      width: 4.5rem;
-      height: 4.5rem;
-   }
-
-   .sunrises__sky {
-      width: 15rem;
-      height: 40dvh;
-      top: 3rem;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 480px) {
-
-   .sunrises__title {
-      font-size: 24px;
-      bottom: 12rem;
-   }
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 15px;
-      width: 220px;
-   }
-   .sunrises__textA {
-      top: 285px;
-      left: 20rem;
-   }
-   
-   .sunrises__textB {
-      top: 195px;
-      right: 20rem;
-   }
-
-   .sunrises__subcontainer {
-      top: 14rem;
-   }
-
-   .sunrises__sun {
-      width: 4.75rem;
-      height: 4.75rem;
-   }
-
-   .sunrises__sky {
-      width: 15rem;
-      height: 40dvh;
-      top: 3.5rem;
-   }
+  .sunrises__sky {
+    width: 15rem;
+    height: 40dvh;
+    top: 3.5rem;
+  }
 }
 
 @media (min-width: 768px) {
+  @keyframes sunriseEffect {
+    0% {
+      opacity: 0;
+      transform: translateY(175%);
+    }
 
-   @keyframes sunriseEffect {
-      0% {
-         opacity: 0;
-         transform: translateY(175%);
-      }
+    100% {
+      opacity: 1;
+      transform: translateY(-165%);
+    }
+  }
 
-      100% {
-         opacity: 1;
-         transform: translateY(-165%);
-      }
-   }
+  .sunrises__title {
+    bottom: 55%;
+    font-size: 30px;
+  }
 
-   .sunrises__title {
-      bottom: 55%;
-      font-size: 30px;
-   }
+  .sunrises__textA {
+    left: 45%;
+    top: 365px;
+  }
 
-   .sunrises__textA {
-      left: 45%;
-      top: 365px;
-   }
+  .sunrises__textB {
+    right: 44%;
+    top: 665px;
+  }
 
-   .sunrises__textB {
-      right: 44%;
-      top: 665px;
-   }
+  .sunrises__sun {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
 
-   .sunrises__sun {
-      width: 6.5rem;
-      height: 6.5rem;
-   }
+  .sunrises__sky {
+    width: 27rem;
+    height: 25dvh;
+  }
+}
 
-   .sunrises__sky {
-      width: 27rem;
-      height: 25dvh;
-   }
+@media (orientation: landscape) and (min-width: 768px) {
+  .sunrises__title {
+    font-size: 22px;
+    bottom: 10rem;
+  }
+  .sunrises__textA,
+  .sunrises__textB {
+    font-size: 14px;
+    width: 195px;
+  }
+  .sunrises__textA {
+    top: 215px;
+    left: 20rem;
+  }
+
+  .sunrises__textB {
+    top: 100px;
+    right: 20rem;
+  }
+
+  .sunrises__subcontainer {
+    top: 12rem;
+  }
+
+  .sunrises__sun {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .sunrises__sky {
+    width: 18rem;
+    height: 35vh;
+    top: .8rem;
+  }
 }
 
 @media (min-width: 1024px) {
-   .sunrises__title {
-      bottom: 55%;
-      font-size: 30px;
-   }
+  @keyframes sunrisesTitle {
+    0% {
+      transform: translateY(0);
+    }
 
-   .sunrises__textA {
-      left: 28%;
-      top: 315px;
-      width: 350px;
-   }
+    50% {
+      transform: translateY(0);
+    }
 
-   .sunrises__textB {
-      right: 28%;
-      top: 350px;
-      width: 350px;
-   }
+    100% {
+      transform: translateY(-50dvh);
+      opacity: 1;
+    }
+  }
 
-   .sunrises__subcontainer {
-      top: 20rem;
-   }
+  .sunrises__title {
+    font-size: 26px;
+  }
 
-   .sunrises__sun {
-      width: 6.5rem;
-      height: 6.5rem;
-   }
+  .sunrises__textA,
+  .sunrises__textB {
+    font-size: 15px;
+    width: 300px;
+    height: 160px;
+  }
 
-   .sunrises__sky {
-      width: 30rem;
-      height: 15dvh;
-      top: 3rem;
-   }
+  .sunrises__textA {
+    left: 20rem;
+    top: 315px;
+  }
+
+  .sunrises__textB {
+    right: 20rem;
+    top: 310px;
+  }
+
+  .sunrises__subcontainer {
+    top: 17rem;
+  }
+
+  .sunrises__sun {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .sunrises__sky {
+    width: 25rem;
+    height: 21dvh;
+    top: 6rem;
+  }
 }
 
 @media (min-width: 1200px) {
+  @keyframes sunriseEffect {
+    0% {
+      opacity: 0;
+      transform: translateY(175%);
+    }
 
-   @keyframes sunriseEffect {
+    100% {
+      opacity: 1;
+      transform: translateY(-195%);
+    }
+  }
+
+  .sunrises__title {
+    font-size: 30px;
+  }
+
+  .sunrises__textA {
+    top: 305px;
+    height: 170px;
+  }
+
+  .sunrises__textB {
+    top: 330px;
+    height: 170px;
+  }
+
+  .sunrises__sky {
+    width: 30rem;
+    height: 15dvh;
+    top: 7rem;
+  }
+}
+
+@media (min-width: 1366px) {
+  .sunrises__sky {
+    top: -1rem;
+    width: 22rem;
+    height: 50dvh;
+  }
+
+  .sunrises__subcontainer {
+    top: 20rem;
+  }
+
+  .sunrises__sun {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .sunrises__sky {
+    width: 22rem;
+    height: 30dvh;
+    top: 1.4rem;
+  }
+
+  .sunrises__textA,
+  .sunrises__textB {
+    font-weight: 450;
+    color: #717171;
+    width: 350px;
+    opacity: 0;
+  }
+
+  .sunrises__textA {
+    top: 305px;
+    left: 23rem;
+  }
+
+  .sunrises__textB {
+    top: 280px;
+    right: 23rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sunrises__title {
+    font-size: 32px;
+  }
+
+  .sunrises__textA,
+  .sunrises__textB {
+    font-size: 16px;
+    width: 350px;
+    height: 140px;
+  }
+
+  .sunrises__textA {
+    top: 400px;
+    height: 160px;
+    font-size: 1.05rem;
+  }
+
+  .sunrises__textB {
+    top: 410px;
+    height: 160px;
+    font-size: 1.05rem;
+  }
+
+  .sunrises__subcontainer {
+    top: 23rem;
+  }
+
+  .sunrises__sun {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .sunrises__sky {
+    top: 3.5rem;
+    width: 25rem;
+    height: 25dvh;
+  }
+}
+
+@media (min-width: 1600px) {
+  .sunrises__textA {
+    top: 400px;
+    left: 25rem;
+  }
+
+  .sunrises__textB {
+    right: 25rem;
+  }
+
+  .sunrises__subcontainer {
+    top: 25rem;
+  }
+}
+
+@media (min-width: 1920px) {
+
+      @keyframes sunrisesTitle {
       0% {
-         opacity: 0;
-         transform: translateY(175%);
+         transform: translateY(0);
+      }
+
+      50% {
+         transform: translateY(0);
       }
 
       100% {
+         transform: translateY(-60dvh);
          opacity: 1;
-         transform: translateY(-195%);
       }
    }
 
    .sunrises__title {
-      font-size: 30px;
-   }
-
-   .sunrises__textA {
-      top: 305px;
-      height: 170px;
-   }
-
-   .sunrises__textB {
-      top: 330px;
-      height: 170px;
-   }
-
-   .sunrises__sky {
-      width: 30rem;
-      height: 15dvh;
-      top: 7rem;
-   }
-}
-
-@media (min-width: 1366px) {
-
-   .sunrises__sky {
-      top: -1rem;
-      width: 22rem;
-      height: 50dvh;
-   }
-
-   .sunrises__sun {
-      width: 7.5rem;
-      height: 7.5rem;
+      font-size: 33px;
    }
 
    .sunrises__textA,
    .sunrises__textB {
-      font-weight: 450;
-      color: #717171;
-      width: 350px;
-      opacity: 0;
+      font-size: 1.1rem;
+      width: 400px;
+      height: 160px;
    }
 
    .sunrises__textA {
-      top: 305px;
+      top: 425px;
+      left: 28rem;
    }
 
    .sunrises__textB {
-      top: 280px;
-   }
-}
-
-@media (min-width: 1440px) {
-   .sunrises__title {
-      font-size: 32px;
+      right: 28rem;
+      top: 425px;
    }
 
-   .sunrises__textA {
-      top: 350px;
-      height: 160px;
-      font-size: 1.05rem;
+   .sunrises__subcontainer {
+      top: 24rem;
    }
 
-   .sunrises__textB {
-      top: 410px;
-      height: 160px;
-      font-size: 1.05rem;
+   .sunrises__sun {
+      width: 9rem;
+      height: 9rem;
    }
 
    .sunrises__sky {
-      top: 3.5rem;
-      width: 22rem;
-      height: 25dvh;
+      top: 4.5rem;
+      width: 30rem;
+      height: 30dvh;
    }
 }

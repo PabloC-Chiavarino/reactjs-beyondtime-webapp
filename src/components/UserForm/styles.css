@@ -21,14 +21,14 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-20dvh);
+      transform: translateY(-20vh);
       opacity: 1;
    }
 }
 
 .userData__container {
    width: 100dvw;
-   height: 100dvh;
+   height: 100vh;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -145,7 +145,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-18dvh);
+      transform: translateY(-18vh);
       opacity: 1;
    }
 }
@@ -210,6 +210,48 @@
    }
 }
 
+@media screen and (orientation: landscape) and (min-width: 320px) {
+
+     @keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-40vh);
+      opacity: 1;
+   }
+}
+
+   .userData__title {
+      font-size: 20px;
+   }
+
+   .userData__form {
+      gap: 0.75rem;
+      top: 2rem;
+   }
+
+   .userData__form input {
+      width: 115px;
+      height: 28px;
+   }
+
+   .userData__form button {
+      width: 75px;
+      height: 30px;
+   }
+
+   .userData__container--ring,
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 250px;
+      height: 250px;
+   }
+}
+
 @media (min-width: 400px) {
 
       @keyframes dataTitle {
@@ -220,7 +262,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-23dvh);
+      transform: translateY(-23vh);
       opacity: 1;
    }
 }
@@ -270,7 +312,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-25dvh);
+      transform: translateY(-22.5vh);
       opacity: 1;
    }
 }
@@ -295,7 +337,7 @@
 
    .userData__form {
       height: 170px;
-      top: 1rem;
+      top: 2rem;
    }
    
    .userData__form input {
@@ -310,7 +352,7 @@
    }
 }
 
-@media screen and (orientation: landscape) and (min-height: 320px) {
+@media screen and (orientation: landscape) and (min-width: 400px) {
 
      @keyframes dataTitle {
    0% {
@@ -320,49 +362,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-40dvh);
-      opacity: 1;
-   }
-}
-
-   .userData__title {
-      font-size: 20px;
-   }
-
-   .userData__form {
-      gap: 0.75rem;
-      top: 2rem;
-   }
-
-   .userData__form input {
-      width: 115px;
-      height: 28px;
-   }
-
-   .userData__form button {
-      width: 75px;
-      height: 30px;
-   }
-
-   .userData__container--ring,
-   .userData__container--secondRing,
-   .userData__container--thirdRing {
-      width: 250px;
-      height: 250px;
-   }
-}
-
-@media screen and (orientation: landscape) and (min-height: 400px) {
-
-     @keyframes dataTitle {
-   0% {
-      transform: translateY(0);
-   }
-   50% {
-      transform: translateY(0);
-   }
-   100% {
-      transform: translateY(-45dvh);
+      transform: translateY(-45vh);
       opacity: 1;
    }
 }
@@ -393,7 +393,7 @@
    }
 }
 
-@media screen and (orientation: landscape) and (min-height: 480px) {
+@media screen and (orientation: landscape) and (min-width: 480px) {
 
      @keyframes dataTitle {
    0% {
@@ -403,7 +403,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-38dvh);
+      transform: translateY(-38vh);
       opacity: 1;
    }
 }
@@ -428,6 +428,39 @@
    }
 }
 
+@media screen and (orientation: landscape) and (min-width: 768px) {
+
+     @keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-53vh);
+      opacity: 1;
+   }
+}
+
+   .userData__container--ring {
+      width: 300px;
+      height: 300px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+   
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 300px;
+      height: 300px;
+      border: 6px solid rgba(255, 255, 255, 0.5);
+   }
+
+   .userData__title {
+      font-size: 22px;
+   }
+}
+
 @media (min-width: 1024px) {
 
       @keyframes dataTitle {
@@ -438,7 +471,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-40dvh);
+      transform: translateY(-40vh);
       opacity: 1;
    }
 }
@@ -484,7 +517,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-45dvh);
+      transform: translateY(-45vh);
       opacity: 1;
    }
 }
@@ -504,7 +537,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-50dvh);
+      transform: translateY(-50vh);
       opacity: 1;
    }
 }
@@ -539,7 +572,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-48dvh);
+      transform: translateY(-48vh);
       opacity: 1;
    }
 }

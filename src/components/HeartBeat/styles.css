@@ -1,545 +1,672 @@
 @keyframes beatEffect {
-   from {
-      transform: scale(0);
-      opacity: 1;
-   }
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
 
-   to {
-      transform: scale(1.4);
-      opacity: 0;
-   }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
 }
 
 @keyframes textAnimationA {
-   from {
-      opacity: 0;
-      transform: translate(-19.5rem, -8.5rem);
-   }
+  from {
+    opacity: 0;
+    transform: translate(-19.5rem, -8.5rem);
+  }
 
-   to {
-      opacity: 1;
-      transform: translate(-16.5rem, -5.5rem);
-   }
+  to {
+    opacity: 1;
+    transform: translate(-16.5rem, -5.5rem);
+  }
 }
 
 @keyframes textAnimationB {
-   from {
-      opacity: 0;
-      transform: translate(19.5rem, 8.5rem);
-   }
+  from {
+    opacity: 0;
+    transform: translate(19.5rem, 8.5rem);
+  }
 
-   to {
-      opacity: 1;
-      transform: translate(16.5rem, 5.5rem);
-   }
+  to {
+    opacity: 1;
+    transform: translate(16.5rem, 5.5rem);
+  }
 }
 
 @keyframes heartAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
 
-   0%,
-   100% {
-      transform: scale(1);
-   }
+  10% {
+    transform: scale(1.05);
+  }
 
-   10% {
-      transform: scale(1.05);
-   }
+  20% {
+    transform: scale(1);
+  }
 
-   20% {
-      transform: scale(1);
-   }
+  30% {
+    transform: scale(1.05);
+  }
 
-   30% {
-      transform: scale(1.05);
-   }
+  40% {
+    transform: scale(1);
+  }
 
-   40% {
-      transform: scale(1);
-   }
-
-   100% {
-      transform: scale(1);
-   }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes heartTitle {
-   0% {
-      transform: translateY(0);
-   }
-   50% {
-      transform: translateY(0);
-   }
-   100% {
-      transform: translateY(-25dvh);
-      opacity: 1;
-   }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25dvh);
+    opacity: 1;
+  }
 }
 
 .beats__container {
-   width: 100dvw;
-   height: 100dvh;
-   background-color: #e6e6e6;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .beats__title {
-   position: absolute;
-   font-weight: 400;
-   color: #202020;
-   animation: heartTitle 1s 0.5s ease-out forwards;
-   opacity: 0;
-   font-size: 21px;
-   bottom: 13rem;
+  position: absolute;
+  font-weight: 400;
+  color: #202020;
+  animation: heartTitle 1s 0.5s ease-out forwards;
+  opacity: 0;
+  font-size: 21px;
+  bottom: 13rem;
 }
 
 .beats__textA,
 .beats__textB {
-   font-weight: 450;
-   color: #717171;
-   opacity: 0;
-   position: absolute;
-   font-size: 13px;
-   overflow-y: scroll;
+  font-weight: 450;
+  color: #717171;
+  opacity: 0;
+  position: absolute;
+  font-size: 13px;
+  overflow-y: scroll;
 }
 
 .beats__text,
 span {
-   color: #e74c3c;
+  color: #e74c3c;
 }
 
 .beats__textA {
-   animation: textAnimationA 1s 2.5s ease-out forwards;
-   height: 55px;
-   left: 96%;
-   top: 230px;
-   width: 75%;
+  animation: textAnimationA 1s 2.5s ease-out forwards;
+  height: 55px;
+  left: 96%;
+  top: 230px;
+  width: 75%;
 }
 
 .beats__textB {
-   animation: textAnimationB 1s 2.5s ease-out forwards;
-   right: 99%;
-   top: 206px;
-   width: 70%;
-   height: 70px;
+  animation: textAnimationB 1s 2.5s ease-out forwards;
+  right: 99%;
+  top: 206px;
+  width: 70%;
+  height: 70px;
 }
 
 .beats__subcontainer {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-   top: 2rem;
-   animation: fadeIn 1s 2s ease-out forwards;
-   opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 2rem;
+  animation: fadeIn 1s 2s ease-out forwards;
+  opacity: 0;
 }
 
 .beats__heart {
-   position: absolute;
-   width: 3rem;
-   height: 3rem;
-   background: transparent;
-   z-index: 1;
-   animation: heartAnimation 1.8s 2.5s ease-in-out infinite;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  z-index: 1;
+  animation: heartAnimation 1.8s 2.5s ease-in-out infinite;
 }
 
 .beat__first,
 .beat__second {
-   position: absolute;
-   opacity: 0;
-   width: 8.5rem;
-   height: 8.5rem;
-   background: rgba(255, 0, 0, 0.15);
-   box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-   border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  width: 8.5rem;
+  height: 8.5rem;
+  background: rgba(255, 0, 0, 0.15);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  border-radius: 50%;
 }
 
 .beat__first {
-   animation: beatEffect 1.8s 2s ease-in-out infinite;
+  animation: beatEffect 1.8s 2s ease-in-out infinite;
 }
 
 .beat__second {
-   animation: beatEffect 1.8s 2.4s ease-in-out infinite;
+  animation: beatEffect 1.8s 2.4s ease-in-out infinite;
+}
+
+@media (orientation: landscape) and (min-width: 320px) {
+  .beats__title {
+    font-size: 18px;
+    bottom: 9.5rem;
+  }
+  .beats__textA,
+  .beats__textB {
+    font-size: 14px;
+    width: 150px;
+    height: 60px;
+  }
+  .beats__textA {
+    top: 212.5px;
+    left: 67%;
+  }
+
+  .beats__textB {
+    top: 125px;
+    right: 67%;
+  }
+
+  .beats__subcontainer {
+    top: 2rem;
+  }
+
+  .beats__heart {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
 }
 
 @media (min-width: 360px) {
+  .beats__title {
+    font-size: 25px;
+    bottom: 18rem;
+  }
 
-   .beats__title {
-      font-size: 25px;
-      bottom: 18rem;
-   }
+  .beats__textA,
+  .beats__textB {
+    font-size: 14px;
+  }
 
-   .beats__textA,
-   .beats__textB {
-      font-size: 14px;
-   }
+  .beats__textA {
+    height: 80px;
+    left: 85%;
+    top: 275px;
+    width: 80%;
+  }
 
-   .beats__textA {
-      height: 80px;
-      left: 85%;
-      top: 275px;
-      width: 80%;
-   }
+  .beats__textB {
+    right: 82%;
+    top: 305px;
+    width: 80%;
+    height: 80px;
+  }
 
-   .beats__textB {
-      right: 82%;
-      top: 305px;
-      width: 80%;
-      height: 80px;;
-   }
+  .beats__subcontainer {
+    top: 2.75rem;
+  }
 
-   .beats__subcontainer {
-      top: 2.75rem;
-   }
+  .beats__heart {
+    width: 4.25rem;
+    height: 4.25rem;
+  }
 
-   .beats__heart {
-      width: 4.25rem;
-      height: 4.25rem;
-   }
+  .beat__first,
+  .beat__second {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+}
 
-   .beat__first,
-   .beat__second {
-      width: 9.5rem;
-      height: 9.5rem;
-   }
+@media (orientation: landscape) and (min-width: 360px) {
+  .beats__title {
+    font-size: 20px;
+    bottom: 10.5rem;
+  }
+  .beats__textA,
+  .beats__textB {
+    font-size: 14px;
+    width: 175px;
+    height: 80px;
+  }
+  .beats__textA {
+    top: 230px;
+    left: 50%;
+  }
+
+  .beats__textB {
+    top: 135px;
+    right: 50%;
+  }
+
+  .beats__heart {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 9rem;
+    height: 9rem;
+  }
 }
 
 @media (min-width: 400px) {
-   .beats__title {
-      font-size: 26px;
-      bottom: 21rem;
-   }
+  .beats__title {
+    font-size: 26px;
+    bottom: 21rem;
+  }
 
-   .beats__textA,
-   .beats__textB {
-      font-size: 15px;
-   }
+  .beats__textA,
+  .beats__textB {
+    font-size: 15px;
+  }
 
-   .beats__textA {
-      left: 74%;
-      top: 304px;
-   }
+  .beats__textA {
+    left: 74%;
+    top: 304px;
+  }
 
-   .beats__textB {
-      right: 73%;
-      top: 365px;
-   }
+  .beats__textB {
+    right: 73%;
+    top: 365px;
+  }
 
-   .beats__subcontainer {
-      top: 2.5rem;
-   }
+  .beats__subcontainer {
+    top: 2.5rem;
+  }
 
-   .beats__heart {
-      width: 4.5rem;
-      height: 4.5rem;
-   }
+  .beats__heart {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 
-   .beat__first,
-   .beat__second {
-      width: 11.5rem;
-      height: 11.5rem;
-   }
+  .beat__first,
+  .beat__second {
+    width: 11.5rem;
+    height: 11.5rem;
+  }
 }
 
 @media (min-width: 400px) and (min-height: 700px) {
-   .beats__title {
-      bottom: 55%;
-      font-size: 27px;
-   }
+  .beats__title {
+    bottom: 55%;
+    font-size: 27px;
+  }
 
-   .beats__textA {
-      left: 74%;
-      top: 304px;
-      height: 105px;
-   }
-   
-   .beats__textB {
-      right: 73%;
-      top: 450px;
-      height: 105px;
-   }
+  .beats__textA {
+    left: 74%;
+    top: 304px;
+    height: 105px;
+  }
 
-   .beats__subcontainer {
-      top: 2rem;
-   }
+  .beats__textB {
+    right: 73%;
+    top: 450px;
+    height: 105px;
+  }
 
-      .beats__heart {
-      width: 5.5rem;
-      height: 5.5rem;
-   }
+  .beats__subcontainer {
+    top: 2rem;
+  }
 
-      .beat__first,
-   .beat__second {
-      width: 13.5rem;
-      height: 13.5rem;
-   }
+  .beats__heart {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 13.5rem;
+    height: 13.5rem;
+  }
 }
 
 @media (min-width: 480px) {
-   .beats__textA {
-      left: 65%;
-   }
-   
-   .beats__textB {
-      right: 65%;
-   }
+  .beats__textA {
+    left: 65%;
+  }
+
+  .beats__textB {
+    right: 65%;
+  }
 }
 
-@media (orientation: landscape) and (min-height: 320px) {
+@media (orientation: landscape) and (min-width: 400px) {
+  .beats__title {
+    font-size: 23px;
+    bottom: 12rem;
+  }
+  .beats__textA,
+  .beats__textB {
+    font-size: 15px;
+    width: 205px;
+    height: 80px;
+  }
+  .beats__textA {
+    top: 240px;
+    left: 20rem;
+  }
+
+  .beats__textB {
+    top: 175px;
+    right: 20rem;
+  }
+
+  .beats__heart {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 480px) {
+  .beats__title {
+    font-size: 24px;
+    bottom: 14rem;
+  }
+  .beats__textA,
+  .beats__textB {
+    font-size: 15px;
+    width: 220px;
+  }
+  .beats__textA {
+    top: 285px;
+    left: 20rem;
+  }
+
+  .beats__textB {
+    top: 195px;
+    right: 20rem;
+  }
+
+  .beats__heart {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .beats__title {
+    bottom: 55%;
+    font-size: 30px;
+  }
+
+  .beats__textA {
+    left: 45%;
+    top: 365px;
+  }
+
+  .beats__textB {
+    right: 44%;
+    top: 665px;
+  }
+
+  .beats__heart {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 768px) {
+  .beats__title {
+    font-size: 22px;
+    bottom: 10rem;
+  }
+  .beats__textA,
+  .beats__textB {
+    font-size: 14px;
+    width: 195px;
+  }
+  .beats__textA {
+    top: 215px;
+    left: 20rem;
+  }
+
+  .beats__textB {
+    top: 100px;
+    right: 20rem;
+  }
+
+  .beats__subcontainer {
+    top: 1.5rem;
+  }
+
+  .beats__heart {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes heartTitle {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-50dvh);
+      opacity: 1;
+    }
+  }
+
+  .beats__title {
+    font-size: 26px;
+  }
+
+  .beats__textA,
+  .beats__textB {
+    font-size: 15px;
+    width: 300px;
+    height: 140px;
+  }
+
+  .beats__textA {
+    left: 20rem;
+    top: 315px;
+  }
+
+  .beats__textB {
+    right: 20rem;
+    top: 350px;
+  }
+
+  .beats__subcontainer {
+    top: 1.5rem;
+  }
+
+  .beats__heart {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .beats__title {
+    font-size: 30px;
+  }
+
+  .beats__textA {
+    top: 305px;
+    height: 170px;
+  }
+
+  .beats__textB {
+    top: 330px;
+    height: 170px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .beats__textA {
+    top: 305px;
+    left: 23rem;
+  }
+
+  .beats__textB {
+    top: 280px;
+    right: 23rem;
+  }
+
+  .beats__heart {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 17rem;
+    height: 17rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .beats__title {
+    font-size: 32px;
+  }
+
+  .beats__textA,
+  .beats__textB {
+    font-size: 16px;
+    width: 350px;
+    height: 140px;
+  }
+
+  .beats__textA {
+    top: 400px;
+    font-size: 1.05rem;
+    height: 160px;
+  }
+
+  .beats__textB {
+    top: 410px;
+    font-size: 1.05rem;
+    height: 160px;
+  }
+
+  .beats__heart {
+    width: 7.25rem;
+    height: 7.25rem;
+  }
+
+  .beat__first,
+  .beat__second {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .beats__textA {
+    top: 400px;
+    left: 25rem;
+  }
+
+  .beats__textB {
+    right: 25rem;
+  }
+
+  .beats__heart {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (min-width: 1920px) {
+
+      @keyframes heartTitle {
+      0% {
+         transform: translateY(0);
+      }
+
+      50% {
+         transform: translateY(0);
+      }
+
+      100% {
+         transform: translateY(-60dvh);
+         opacity: 1;
+      }
+   }
 
    .beats__title {
-      font-size: 18px;
-      bottom: 9.5rem;
-   }
-   .beats__textA,
-   .beats__textB {
-      font-size: 14px;
-      width: 150px;
-      height: 60px;
-   }
-   .beats__textA {
-      top: 212.5px;
-      left: 67%;
-   }
-   
-   .beats__textB {
-      top: 125px;
-      right: 67%;
+      font-size: 33px;
    }
 
-   .beats__subcontainer {
-      top: 2rem;
+   .beats__textA,
+   .beats__textB {
+      font-size: 1.1rem;
+      width: 400px;
+   }
+
+   .beats__textA {
+      top: 425px;
+      left: 28rem;
+   }
+
+   .beats__textB {
+      right: 28rem;
+      top: 425px;
    }
 
    .beats__heart {
-      width: 3rem;
-      height: 3rem;
-   }
-
-   .beat__first,
-   .beat__second {
-      width: 7.5rem;
-      height: 7.5rem;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 360px) {
-
-   .beats__title {
-      font-size: 20px;
-      bottom: 10.5rem;
-   }
-   .beats__textA,
-   .beats__textB {
-      font-size: 14px;
-      width: 175px;
-      height: 80px;
-   }
-   .beats__textA {
-      top: 230px;
-      left: 50%;
-   }
-   
-   .beats__textB {
-      top: 135px;
-      right: 50%;
-   }
-
-   .beats__heart {
-      width: 3.5rem;
-      height: 3.5rem;
-   }
-
-   .beat__first,
-   .beat__second {
       width: 9rem;
       height: 9rem;
    }
 }
 
-@media (orientation: landscape) and (min-height: 400px) {
-
-   .beats__title {
-      font-size: 23px;
-      bottom: 12rem;
-   }
-   .beats__textA,
-   .beats__textB {
-      font-size: 15px;
-      width: 205px;
-      height: 80px;
-   }
-   .beats__textA {
-      top: 240px;
-      left: 20rem;
-   }
-   
-   .beats__textB {
-      top: 175px;
-      right: 20rem;
-   }
-
-   .beats__heart {
-      width: 4.5rem;
-      height: 4.5rem;
-   }
-
-   .beat__first,
-   .beat__second {
-      width: 11rem;
-      height: 11rem;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 480px) {
-
-   .beats__title {
-      font-size: 24px;
-      bottom: 14rem;
-   }
-   .beats__textA,
-   .beats__textB {
-      font-size: 15px;
-      width: 220px;
-   }
-   .beats__textA {
-      top: 285px;
-      left: 20rem;
-   }
-   
-   .beats__textB {
-      top: 195px;
-      right: 20rem;
-   }
-
-   .beats__heart {
-      width: 4.5rem;
-      height: 4.5rem;
-   }
-
-   .beat__first,
-   .beat__second {
-      width: 12rem;
-      height: 12rem;
-   }
-}
-
-@media (min-width: 768px) {
-   .beats__title {
-      bottom: 55%;
-      font-size: 30px;
-   }
-
-   .beats__textA {
-      left: 45%;
-      top: 365px;
-   }
-   
-   .beats__textB {
-      right: 44%;
-      top: 665px;
-   }
-
-   .beats__heart {
-      width: 6.5rem;
-      height: 6.5rem;
-   }
-
-   .beat__first,
-   .beat__second {
-      width: 16rem;
-      height: 16rem;
-   }
-}
-
-@media (min-width: 1024px) {
-   .beats__title {
-      bottom: 55%;
-      font-size: 30px;
-   }
-
-   .beats__textA {
-      left: 28%;
-      top: 315px;
-      width: 350px;
-   }
-
-   .beats__textB {
-      right: 28%;
-      top: 350px;
-      width: 350px;
-   }
-
-   .beats__subcontainer {
-      top: 2.5rem;
-   }
-
-   .beats__heart {
-      width: 6rem;
-      height: 6rem;
-   }
-
-   .beat__first,
-   .beat__second {
-      width: 19rem;
-      height: 19rem;
-   }
-}
-
-@media (min-width: 1200px) {
-   .beats__title {
-      font-size: 30px;
-   }
-
-   .beats__textA {
-      top: 305px;
-      height: 170px;
-   }
-
-   .beats__textB {
-      top: 330px;
-      height: 170px;
-   }
-}
-
-@media (min-width: 1366px) {
-
-   .beats__textA {
-      top: 305px;
-   }
-   
-   .beats__textB {
-      top: 280px;
-   }
-}
-
-@media (min-width: 1440px) {
-
-   .beats__title {
-      font-size: 32px;
-   }
-
-   .beats__textA {
-      top: 350px;
-      font-size: 1.05rem;
-      height: 160px;
-   }
-   
-   .beats__textB {
-      top: 410px;
-      font-size: 1.05rem;
-      height: 160px;
-   }
-
-   .beats__heart {
-      width: 7.25rem;
-      height: 7.25rem;
-   }
-
-   .beat__first,
-   .beat__second {
-      width: 22rem;
-      height: 22rem;
-   }
-}

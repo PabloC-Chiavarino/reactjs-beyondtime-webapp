@@ -60,45 +60,7 @@
    animation: forwardEffect 2s 5s ease-in-out forwards;
 }
 
-@media (min-width: 360px) {
-
-   .forward__img--wrapper {
-      &::before {
-         right: 3rem;
-         font-size: .8rem;
-      }
-   }
-   
-   .forward__img--wrapper:hover::before {
-      opacity: 1;
-   }
-   
-   .forward__img {
-      width: 34px;
-      height: 34px;
-   }
-}
-
-@media (min-width: 400px) {
-
-   .forward__img--wrapper {
-      &::before {
-         right: 3.5rem;
-         font-size: 1rem;
-      }
-   }
-   
-   .forward__img--wrapper:hover::before {
-      opacity: 1;
-   }
-   
-   .forward__img {
-      width: 38px;
-      height: 38px;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 320px) {
+@media (orientation: landscape) and (min-width: 320px) {
 
    .forward__container {
       bottom: .5rem;
@@ -129,7 +91,26 @@
    }
 }
 
-@media screen and (orientation: landscape) and (min-height: 360px) {
+@media (min-width: 360px) {
+
+   .forward__img--wrapper {
+      &::before {
+         right: 3rem;
+         font-size: .8rem;
+      }
+   }
+   
+   .forward__img--wrapper:hover::before {
+      opacity: 1;
+   }
+   
+   .forward__img {
+      width: 34px;
+      height: 34px;
+   }
+}
+
+@media screen and (orientation: landscape) and (min-width: 360px) {
 
    .forward__container {
       bottom: 1rem;
@@ -152,7 +133,26 @@
    }
 }
 
-@media screen and (orientation: landscape) and (min-height: 480px) {
+@media (min-width: 400px) {
+
+   .forward__img--wrapper {
+      &::before {
+         right: 3.5rem;
+         font-size: 1rem;
+      }
+   }
+   
+   .forward__img--wrapper:hover::before {
+      opacity: 1;
+   }
+   
+   .forward__img {
+      width: 38px;
+      height: 38px;
+   }
+}
+
+@media screen and (orientation: landscape) and (min-width: 480px) {
 
    .forward__container {
       bottom: 1rem;
@@ -172,6 +172,29 @@
    .forward__img {
       width: 33px;
       height: 33px;
+   }
+}
+
+@media screen and (orientation: landscape) and (min-width: 768px) {
+
+   .forward__container {
+      bottom: .7rem;
+   }
+
+   .forward__img--wrapper {
+      &::before {
+         right: 2.5rem;
+         font-size: .8rem;
+      }
+   }
+   
+   .forward__img--wrapper:hover::before {
+      opacity: 1;
+   }
+   
+   .forward__img {
+      width: 28px;
+      height: 28px;
    }
 }
 
@@ -197,7 +220,8 @@
 
    .forward__img--wrapper {
       &::before {
-         right: 4.5rem;
+         right: 3.5rem;
+         font-size: 1rem;
       }
    }
    
@@ -206,7 +230,31 @@
    }
    
    .forward__img {
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
+   }
+}
+
+@media (min-width: 1920px) {
+
+   .forward__container {
+      bottom: 2rem;
+      right: 2rem;
+   }
+
+   .forward__img--wrapper {
+      &::before {
+         right: 4rem;
+         font-size: 1rem;
+      }
+   }
+   
+   .forward__img--wrapper:hover::before {
+      opacity: 1;
+   }
+   
+   .forward__img {
+      width: 45px;
+      height: 45px;
    }
 }
