@@ -176,7 +176,7 @@ span {
    
    .journeyClock__textA,
    .journeyClock__textB {
-      font-size: 15px;
+      font-size: 14px;
    }
    
    .journeyClock__textA {
@@ -231,7 +231,7 @@ span {
    
    .journeyClock__textA,
    .journeyClock__textB {
-      font-size: 1rem;
+      font-size: 15px;
    }
    
    .journeyClock__textA {
@@ -398,10 +398,12 @@ span {
    
    .journeyClock__textA {
       top: 305px;
+      height: 170px;
    }
    
    .journeyClock__textB {
       top: 330px;
+      height: 170px;
    }
 
    .journeyClock__clock {
@@ -474,13 +476,13 @@ span {
    
    .journeyClock__textA {
       top: 350px;
-      height: 160px;
+      height: 180px;
       font-size: 1.05rem;
    }
    
    .journeyClock__textB {
       top: 410px;
-      height: 160px;
+      height: 180px;
       font-size: 1.05rem;
    }
 
@@ -508,5 +510,163 @@ span {
       width: 1.5px;
       height: 4.5px;
       --line-distance: 115px;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 320px) {
+
+   .journeyClock__title {
+      font-size: 18px;
+      bottom: 9.5rem;
+   }
+
+   .journeyClock__textA,
+   .journeyClock__textB {
+      font-size: 14px;
+      width: 150px;
+      height: 60px;
+   }
+
+   .journeyClock__textA {
+      top: 212.5px;
+      left: 67%;
+   }
+
+   .journeyClock__textB {
+      top: 125px;
+      right: 67%;
+   }
+
+   .journeyClock__subcontainer {
+      top: 1rem;
+   }
+
+   .journeyClock__clock {
+      width: 3.2rem;
+      height: 3.2rem;
+   }
+
+   .journeyClock__clock--hours {
+      width: 2px;
+      height: 30%;
+   }
+   
+   .journeyClock__clock--minutes {
+      width: 1.5px;
+      height: 37%;
+   }
+   
+   .journeyClock__clock--seconds {
+      width: 1px;
+      height: 38%;
+   }
+   
+   .journeyClock__clock--line {
+      height: 2px;
+      --line-distance: 22px;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 360px) {
+
+   .journeyClock__title {
+      font-size: 20px;
+      bottom: 10.5rem;
+   }
+   .journeyClock__textA,
+   .journeyClock__textB {
+      font-size: 14px;
+      width: 175px;
+      height: 80px;
+   }
+   .journeyClock__textA {
+      top: 230px;
+      left: 50%;
+   }
+   
+   .journeyClock__textB {
+      top: 135px;
+      right: 50%;
+   }
+
+   .journeyClock__subcontainer {
+      top: 2rem;
+   }
+
+   .journeyClock__clock {
+      width: 5.2rem;
+      height: 5.2rem;
+   }
+
+   .journeyClock__clock--hours {
+      width: 3px;
+      height: 30%;
+   }
+   
+   .journeyClock__clock--minutes {
+      width: 2px;
+      height: 37%;
+   }
+   
+   .journeyClock__clock--seconds {
+      width: 1.5px;
+      height: 38%;
+   }
+   
+   .journeyClock__clock--line {
+      height: 3px;
+      --line-distance: 37px;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 400px) {
+
+   .journeyClock__title {
+      font-size: 23px;
+      bottom: 14rem;
+   }
+   .journeyClock__textA,
+   .journeyClock__textB {
+      font-size: 15px;
+      width: 205px;
+      height: 80px;
+   }
+   .journeyClock__textA {
+      top: 240px;
+      left: 20rem;
+   }
+   
+   .journeyClock__textB {
+      top: 175px;
+      right: 20rem;
+   }
+
+   .journeyClock__subcontainer {
+      top: 2rem;
+   }
+
+   .journeyClock__clock {
+      width: 7.5rem;
+      height: 7.5rem;
+   }
+
+   .journeyClock__clock--hours {
+      width: 3px;
+      height: 30%;
+   }
+   
+   .journeyClock__clock--minutes {
+      width: 2px;
+      height: 37%;
+   }
+   
+   .journeyClock__clock--seconds {
+      width: 1.5px;
+      height: 38%;
+   }
+   
+   .journeyClock__clock--line {
+      height: 3px;
+      --line-distance: 55px;
    }
 }

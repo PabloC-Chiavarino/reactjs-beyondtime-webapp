@@ -21,7 +21,7 @@
       transform: translateY(0);
    }
    100% {
-      transform: translateY(-10dvh);
+      transform: translateY(-20dvh);
       opacity: 1;
    }
 }
@@ -441,6 +441,105 @@
    }
    100% {
       transform: translateY(-48dvh);
+      opacity: 1;
+   }
+}
+}
+
+@media screen and (orientation: landscape) and (min-height: 320px) {
+
+     @keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-40dvh);
+      opacity: 1;
+   }
+}
+
+   .userData__title {
+      font-size: 20px;
+   }
+
+   .userData__form {
+      gap: 0.75rem;
+      top: 2rem;
+   }
+
+   .userData__form input {
+      width: 115px;
+      height: 28px;
+   }
+
+   .userData__form button {
+      width: 75px;
+      height: 30px;
+   }
+
+   .userData__container--ring,
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 250px;
+      height: 250px;
+   }
+}
+
+@media screen and (orientation: landscape) and (min-height: 400px) {
+
+     @keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-45dvh);
+      opacity: 1;
+   }
+}
+
+   .userData__title {
+      font-size: 22px;
+   }
+
+   .userData__form {
+      top: 2.5rem;
+   }
+
+   .userData__form input {
+      width: 130px;
+      height: 29px;
+   }
+
+   .userData__form button {
+      width: 90px;
+      height: 32px;
+   }
+
+   .userData__container--ring,
+   .userData__container--secondRing,
+   .userData__container--thirdRing {
+      width: 325px;
+      height: 325px;
+   }
+}
+
+@media screen and (orientation: landscape) and (min-height: 480px) {
+
+     @keyframes dataTitle {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-38dvh);
       opacity: 1;
    }
 }

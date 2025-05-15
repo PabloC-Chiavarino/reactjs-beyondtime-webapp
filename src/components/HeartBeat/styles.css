@@ -172,7 +172,7 @@ span {
 
    .beats__textA,
    .beats__textB {
-      font-size: 15px;
+      font-size: 14px;
    }
 
    .beats__textA {
@@ -213,7 +213,7 @@ span {
 
    .beats__textA,
    .beats__textB {
-      font-size: 1rem;
+      font-size: 15px;
    }
 
    .beats__textA {
@@ -355,10 +355,12 @@ span {
 
    .beats__textA {
       top: 305px;
+      height: 170px;
    }
 
    .beats__textB {
       top: 330px;
+      height: 170px;
    }
 }
 
@@ -400,5 +402,144 @@ span {
    .beat__second {
       width: 22rem;
       height: 22rem;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 320px) {
+
+   .beats__title {
+      font-size: 18px;
+      bottom: 9.5rem;
+   }
+   .beats__textA,
+   .beats__textB {
+      font-size: 14px;
+      width: 150px;
+      height: 60px;
+   }
+   .beats__textA {
+      top: 212.5px;
+      left: 67%;
+   }
+   
+   .beats__textB {
+      top: 125px;
+      right: 67%;
+   }
+
+   .beats__subcontainer {
+      top: 2rem;
+   }
+
+   .beats__heart {
+      width: 3rem;
+      height: 3rem;
+   }
+
+   .beat__first,
+   .beat__second {
+      width: 7.5rem;
+      height: 7.5rem;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 360px) {
+
+   .beats__title {
+      font-size: 20px;
+      bottom: 10.5rem;
+   }
+   .beats__textA,
+   .beats__textB {
+      font-size: 14px;
+      width: 175px;
+      height: 80px;
+   }
+   .beats__textA {
+      top: 230px;
+      left: 50%;
+   }
+   
+   .beats__textB {
+      top: 135px;
+      right: 50%;
+   }
+
+   .beats__heart {
+      width: 3.5rem;
+      height: 3.5rem;
+   }
+
+   .beat__first,
+   .beat__second {
+      width: 9rem;
+      height: 9rem;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 400px) {
+
+   .beats__title {
+      font-size: 23px;
+      bottom: 12rem;
+   }
+   .beats__textA,
+   .beats__textB {
+      font-size: 15px;
+      width: 205px;
+      height: 80px;
+   }
+   .beats__textA {
+      top: 240px;
+      left: 20rem;
+   }
+   
+   .beats__textB {
+      top: 175px;
+      right: 20rem;
+   }
+
+   .beats__heart {
+      width: 4.5rem;
+      height: 4.5rem;
+   }
+
+   .beat__first,
+   .beat__second {
+      width: 11rem;
+      height: 11rem;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 480px) {
+
+   .beats__title {
+      font-size: 24px;
+      bottom: 14rem;
+   }
+   .beats__textA,
+   .beats__textB {
+      font-size: 15px;
+      width: 220px;
+   }
+   .beats__textA {
+      top: 285px;
+      left: 20rem;
+   }
+   
+   .beats__textB {
+      top: 195px;
+      right: 20rem;
+   }
+
+   .beats__heart {
+      width: 4.5rem;
+      height: 4.5rem;
+   }
+
+   .beat__first,
+   .beat__second {
+      width: 12rem;
+      height: 12rem;
    }
 }

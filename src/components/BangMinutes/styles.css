@@ -163,7 +163,7 @@ span {
 
    .bangMinutes__textA,
    .bangMinutes__textB {
-      font-size: 15px;
+      font-size: 14px;
    }
 
    .bangMinutes__textA {
@@ -204,12 +204,12 @@ span {
    }
 
    canvas {
-      scale: 1.1;
+      scale: .8;
    }
 
    .bangMinutes__textA,
    .bangMinutes__textB {
-      font-size: 1rem;
+      font-size: 15px;
    }
 
    .bangMinutes__textA {
@@ -296,10 +296,12 @@ span {
 
    .bangMinutes__textA {
       top: 305px;
+      height: 170px;
    }
 
    .bangMinutes__textB {
       top: 330px;
+      height: 170px;
    }
 
    .bangMinutes__core--explosion {
@@ -342,3 +344,148 @@ span {
       height: 160px;
    }
 }
+
+@media (orientation: landscape) and (min-height: 320px) {
+
+   .bangMinutes__title {
+      font-size: 18px;
+      bottom: 9.5rem;
+   }
+   .bangMinutes__textA,
+   .bangMinutes__textB {
+      font-size: 14px;
+      width: 150px;
+      height: 60px;
+   }
+   .bangMinutes__textA {
+      top: 212.5px;
+      left: 67%;
+   }
+   
+   .bangMinutes__textB {
+      top: 125px;
+      right: 67%;
+   }
+
+   .bangMinutes__core--explosion {
+      width: 10rem;
+      height: 10rem;
+   }
+
+   .bangMinutes__core {
+      width: 3rem;
+      height: 3rem;
+   }
+   canvas {
+      scale: .6;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 360px) {
+
+   .bangMinutes__title {
+      font-size: 20px;
+      bottom: 10.5rem;
+   }
+   .bangMinutes__textA,
+   .bangMinutes__textB {
+      font-size: 14px;
+      width: 175px;
+      height: 80px;
+   }
+   .bangMinutes__textA {
+      top: 230px;
+      left: 50%;
+   }
+   
+   .bangMinutes__textB {
+      top: 135px;
+      right: 50%;
+   }
+
+   .bangMinutes__core--explosion {
+      width: 10rem;
+      height: 10rem;
+   }
+
+   .bangMinutes__core {
+      width: 4rem;
+      height: 4rem;
+   }
+   canvas {
+      scale: .7;
+   }
+}
+
+
+@media (orientation: landscape) and (min-height: 400px) {
+
+   .bangMinutes__title {
+      font-size: 23px;
+      bottom: 12rem;
+   }
+   .bangMinutes__textA,
+   .bangMinutes__textB {
+      font-size: 15px;
+      width: 205px;
+      height: 80px;
+   }
+   .bangMinutes__textA {
+      top: 240px;
+      left: 20rem;
+   }
+   
+   .bangMinutes__textB {
+      top: 175px;
+      right: 20rem;
+   }
+
+   .bangMinutes__core--explosion {
+      width: 10rem;
+      height: 10rem;
+   }
+
+   .bangMinutes__core {
+      width: 4rem;
+      height: 4rem;
+   }
+   canvas {
+      scale: .8;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 480px) {
+
+   .bangMinutes__title {
+      font-size: 24px;
+      bottom: 14rem;
+   }
+   .bangMinutes__textA,
+   .bangMinutes__textB {
+      font-size: 15px;
+      width: 220px;
+   }
+   .bangMinutes__textA {
+      top: 285px;
+      left: 20rem;
+   }
+   
+   .bangMinutes__textB {
+      top: 195px;
+      right: 20rem;
+   }
+
+   .bangMinutes__core--explosion {
+      width: 10rem;
+      height: 10rem;
+   }
+
+   .bangMinutes__core {
+      width: 4rem;
+      height: 4rem;
+   }
+   canvas {
+      scale: .9;
+   }
+}
+
