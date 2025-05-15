@@ -289,6 +289,160 @@ span {
    }
 }
 
+@media (orientation: landscape) and (min-height: 320px) {
+
+   .sunrises__title {
+      font-size: 18px;
+      bottom: 9.5rem;
+   }
+
+   .sunrises__textA,
+   .sunrises__textB {
+      font-size: 14px;
+      width: 150px;
+      height: 60px;
+   }
+
+   .sunrises__textA {
+      top: 212.5px;
+      left: 67%;
+   }
+
+   .sunrises__textB {
+      top: 125px;
+      right: 67%;
+   }
+
+   .sunrises__subcontainer {
+      top: 6rem;
+   }
+
+   .sunrises__sky {
+      width: 10rem;
+      height: 40dvh;
+      top: 5.5rem;
+   }
+
+   .sunrises__sun {
+      width: 3rem;
+      height: 3rem;
+
+   }
+}
+
+@media (orientation: landscape) and (min-height: 360px) {
+
+   .sunrises__title {
+      font-size: 20px;
+      bottom: 10.5rem;
+   }
+   .sunrises__textA,
+   .sunrises__textB {
+      font-size: 14px;
+      width: 175px;
+      height: 80px;
+   }
+   .sunrises__textA {
+      top: 230px;
+      left: 50%;
+   }
+   
+   .sunrises__textB {
+      top: 135px;
+      right: 50%;
+   }
+
+   .sunrises__sun {
+      width: 3.5rem;
+      height: 3.5rem;
+   }
+
+   .sunrises__sky {
+      width: 10rem;
+      height: 40dvh;
+      top: 5.5rem;
+   }
+
+   .sunrises__subcontainer {
+      top: 8rem;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 400px) {
+
+   .sunrises__title {
+      font-size: 23px;
+      bottom: 12rem;
+   }
+   .sunrises__textA,
+   .sunrises__textB {
+      font-size: 15px;
+      width: 205px;
+      height: 80px;
+   }
+   .sunrises__textA {
+      top: 240px;
+      left: 20rem;
+   }
+   
+   .sunrises__textB {
+      top: 175px;
+      right: 20rem;
+   }
+
+   .sunrises__subcontainer {
+      top: 11rem;
+   }
+
+   .sunrises__sun {
+      width: 4.5rem;
+      height: 4.5rem;
+   }
+
+   .sunrises__sky {
+      width: 15rem;
+      height: 40dvh;
+      top: 3rem;
+   }
+}
+
+@media (orientation: landscape) and (min-height: 480px) {
+
+   .sunrises__title {
+      font-size: 24px;
+      bottom: 12rem;
+   }
+   .sunrises__textA,
+   .sunrises__textB {
+      font-size: 15px;
+      width: 220px;
+   }
+   .sunrises__textA {
+      top: 285px;
+      left: 20rem;
+   }
+   
+   .sunrises__textB {
+      top: 195px;
+      right: 20rem;
+   }
+
+   .sunrises__subcontainer {
+      top: 14rem;
+   }
+
+   .sunrises__sun {
+      width: 4.75rem;
+      height: 4.75rem;
+   }
+
+   .sunrises__sky {
+      width: 15rem;
+      height: 40dvh;
+      top: 3.5rem;
+   }
+}
+
 @media (min-width: 768px) {
 
    @keyframes sunriseEffect {
@@ -449,159 +603,5 @@ span {
       top: 3.5rem;
       width: 22rem;
       height: 25dvh;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 320px) {
-
-   .sunrises__title {
-      font-size: 18px;
-      bottom: 9.5rem;
-   }
-
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 14px;
-      width: 150px;
-      height: 60px;
-   }
-
-   .sunrises__textA {
-      top: 212.5px;
-      left: 67%;
-   }
-
-   .sunrises__textB {
-      top: 125px;
-      right: 67%;
-   }
-
-   .sunrises__subcontainer {
-      top: 6rem;
-   }
-
-   .sunrises__sky {
-      width: 10rem;
-      height: 40dvh;
-      top: 5.5rem;
-   }
-
-   .sunrises__sun {
-      width: 3rem;
-      height: 3rem;
-
-   }
-}
-
-@media (orientation: landscape) and (min-height: 360px) {
-
-   .sunrises__title {
-      font-size: 20px;
-      bottom: 10.5rem;
-   }
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 14px;
-      width: 175px;
-      height: 80px;
-   }
-   .sunrises__textA {
-      top: 230px;
-      left: 50%;
-   }
-   
-   .sunrises__textB {
-      top: 135px;
-      right: 50%;
-   }
-
-   .sunrises__sun {
-      width: 3.5rem;
-      height: 3.5rem;
-   }
-
-   .sunrises__sky {
-      width: 10rem;
-      height: 40dvh;
-      top: 5.5rem;
-   }
-
-   .sunrises__subcontainer {
-      top: 8rem;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 400px) {
-
-   .sunrises__title {
-      font-size: 23px;
-      bottom: 12rem;
-   }
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 15px;
-      width: 205px;
-      height: 80px;
-   }
-   .sunrises__textA {
-      top: 240px;
-      left: 20rem;
-   }
-   
-   .sunrises__textB {
-      top: 175px;
-      right: 20rem;
-   }
-
-   .sunrises__subcontainer {
-      top: 11rem;
-   }
-
-   .sunrises__sun {
-      width: 4.5rem;
-      height: 4.5rem;
-   }
-
-   .sunrises__sky {
-      width: 15rem;
-      height: 40dvh;
-      top: 3rem;
-   }
-}
-
-@media (orientation: landscape) and (min-height: 480px) {
-
-   .sunrises__title {
-      font-size: 24px;
-      bottom: 12rem;
-   }
-   .sunrises__textA,
-   .sunrises__textB {
-      font-size: 15px;
-      width: 220px;
-   }
-   .sunrises__textA {
-      top: 285px;
-      left: 20rem;
-   }
-   
-   .sunrises__textB {
-      top: 195px;
-      right: 20rem;
-   }
-
-   .sunrises__subcontainer {
-      top: 14rem;
-   }
-
-   .sunrises__sun {
-      width: 4.75rem;
-      height: 4.75rem;
-   }
-
-   .sunrises__sky {
-      width: 15rem;
-      height: 40dvh;
-      top: 3.5rem;
    }
 }

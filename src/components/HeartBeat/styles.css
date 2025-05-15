@@ -286,125 +286,6 @@ span {
    }
 }
 
-@media (min-width: 768px) {
-   .beats__title {
-      bottom: 55%;
-      font-size: 30px;
-   }
-
-   .beats__textA {
-      left: 45%;
-      top: 365px;
-   }
-   
-   .beats__textB {
-      right: 44%;
-      top: 665px;
-   }
-
-   .beats__heart {
-      width: 6.5rem;
-      height: 6.5rem;
-   }
-
-   .beat__first,
-   .beat__second {
-      width: 16rem;
-      height: 16rem;
-   }
-}
-
-@media (min-width: 1024px) {
-   .beats__title {
-      bottom: 55%;
-      font-size: 30px;
-   }
-
-   .beats__textA {
-      left: 28%;
-      top: 315px;
-      width: 350px;
-   }
-
-   .beats__textB {
-      right: 28%;
-      top: 350px;
-      width: 350px;
-   }
-
-   .beats__subcontainer {
-      top: 2.5rem;
-   }
-
-   .beats__heart {
-      width: 6rem;
-      height: 6rem;
-   }
-
-   .beat__first,
-   .beat__second {
-      width: 19rem;
-      height: 19rem;
-   }
-}
-
-@media (min-width: 1200px) {
-   .beats__title {
-      font-size: 30px;
-   }
-
-   .beats__textA {
-      top: 305px;
-      height: 170px;
-   }
-
-   .beats__textB {
-      top: 330px;
-      height: 170px;
-   }
-}
-
-@media (min-width: 1366px) {
-
-   .beats__textA {
-      top: 305px;
-   }
-   
-   .beats__textB {
-      top: 280px;
-   }
-}
-
-@media (min-width: 1440px) {
-
-   .beats__title {
-      font-size: 32px;
-   }
-
-   .beats__textA {
-      top: 350px;
-      font-size: 1.05rem;
-      height: 160px;
-   }
-   
-   .beats__textB {
-      top: 410px;
-      font-size: 1.05rem;
-      height: 160px;
-   }
-
-   .beats__heart {
-      width: 7.25rem;
-      height: 7.25rem;
-   }
-
-   .beat__first,
-   .beat__second {
-      width: 22rem;
-      height: 22rem;
-   }
-}
-
 @media (orientation: landscape) and (min-height: 320px) {
 
    .beats__title {
@@ -541,5 +422,124 @@ span {
    .beat__second {
       width: 12rem;
       height: 12rem;
+   }
+}
+
+@media (min-width: 768px) {
+   .beats__title {
+      bottom: 55%;
+      font-size: 30px;
+   }
+
+   .beats__textA {
+      left: 45%;
+      top: 365px;
+   }
+   
+   .beats__textB {
+      right: 44%;
+      top: 665px;
+   }
+
+   .beats__heart {
+      width: 6.5rem;
+      height: 6.5rem;
+   }
+
+   .beat__first,
+   .beat__second {
+      width: 16rem;
+      height: 16rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   .beats__title {
+      bottom: 55%;
+      font-size: 30px;
+   }
+
+   .beats__textA {
+      left: 28%;
+      top: 315px;
+      width: 350px;
+   }
+
+   .beats__textB {
+      right: 28%;
+      top: 350px;
+      width: 350px;
+   }
+
+   .beats__subcontainer {
+      top: 2.5rem;
+   }
+
+   .beats__heart {
+      width: 6rem;
+      height: 6rem;
+   }
+
+   .beat__first,
+   .beat__second {
+      width: 19rem;
+      height: 19rem;
+   }
+}
+
+@media (min-width: 1200px) {
+   .beats__title {
+      font-size: 30px;
+   }
+
+   .beats__textA {
+      top: 305px;
+      height: 170px;
+   }
+
+   .beats__textB {
+      top: 330px;
+      height: 170px;
+   }
+}
+
+@media (min-width: 1366px) {
+
+   .beats__textA {
+      top: 305px;
+   }
+   
+   .beats__textB {
+      top: 280px;
+   }
+}
+
+@media (min-width: 1440px) {
+
+   .beats__title {
+      font-size: 32px;
+   }
+
+   .beats__textA {
+      top: 350px;
+      font-size: 1.05rem;
+      height: 160px;
+   }
+   
+   .beats__textB {
+      top: 410px;
+      font-size: 1.05rem;
+      height: 160px;
+   }
+
+   .beats__heart {
+      width: 7.25rem;
+      height: 7.25rem;
+   }
+
+   .beat__first,
+   .beat__second {
+      width: 22rem;
+      height: 22rem;
    }
 }
